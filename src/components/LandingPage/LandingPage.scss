@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  // position: relative;
   background-color: #222226;
 }
 
@@ -32,7 +32,7 @@ video {
   min-width: 100%;
   min-height: 100%;
   object-fit: fill;
-  position: absolute;
+  // position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -72,18 +72,21 @@ video {
 
 main {
   width: 100%;
-  // height: 60%;
+  height: 3500px;
+  // height: 60vh;
   // background-color: pink;
 }
 
 #image-container {
-  background-color: red;
+  height: 5%;
+  // background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #profile-pic {
+  top: 510px;
   height: 350px;
   width: 370px;
   position: absolute;
@@ -94,42 +97,38 @@ main {
 
 #intro-section {
   // background-color: green;
-  height: 350px;
+  height: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 65%;
+  width: 80%;
   margin: 0 auto;
   border-bottom: 1px solid $black;
   padding-bottom: 0px;
 }
 
 #name {
-  margin: 150px 0px 0px 0px;
+  margin: 0px 0px 0px;
   font-size: 3em;
   font-weight: 600;
+  text-align: center;
 }
 
 #title {
   margin: 10px 0px 0px 0px;
   font-size: 2em;
   font-weight: 100;
-}
-
-#skills-box {
-  height: 20px;
-  background-color: pink;
-  width: 80%;
-  margin: 0 auto;
-  height: 900px;
+  text-align: center;
 }
 
 #about-me {
-  // height: 100px;
-  // background-color: black;
+  height: 15%;
+  // background-color: orange;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .titles {
@@ -143,12 +142,71 @@ main {
 
 .titles-text {
   // background-color: pink;
-  width: 60%;
+  // width: 60%;
   margin: 30px auto 70px auto;
   text-align: center;
   font-size: 1.8em;
   font-weight: 400;
 }
+
+#skills {
+  // background-color: magenta;
+  height: 50%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#skills-title {
+  // width: 50%;
+  // margin: 0 auto;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 600;
+  height: 5%;
+  margin: 0;
+  // background-color: yellow;
+}
+
+#skills-box {
+  // background-color: pink;
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+
+.logo-box {
+  height: 16%;
+  width: 16%;
+  margin: 0px 25px;
+  // background-color: blue;
+}
+
+.logo-container {
+  height: 70%;
+  width: 100%;
+}
+
+.skill-name {
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+  padding-top: 10px;
+}
+
+#education {
+  width: 65%;
+  margin: 0 auto;
+  height: 25%;
+  background-color: purple;
+}
+
+// FOOTER STUFF
 
 #landing-page-footer {
   width: 100%;
@@ -172,6 +230,7 @@ main {
   margin-left: 70px;
   margin-right: 70px;
   font-size: 1.2em;
+
 }
 
 #footer-social-media {

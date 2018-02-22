@@ -7,51 +7,60 @@ import knexLogo from './assets/knexlogo.svg';
 import nodeJSLogo from './assets/nodejslogo.svg';
 import reactLogo from './assets/reactlogo.svg';
 import reduxLogo from './assets/reduxlogo.svg';
-import routerLogo from './assets/reduxlogo.svg';
+import routerLogo from './assets/routerlogo.svg';
 import sassLogo from './assets/sasslogo.svg';
 import sqlLogo from './assets/sqllogo.svg';
-import expressLogo from './assets/expresslogo.svg';
-
+import expressLogo from './assets/expresslogo.png';
+import gitLogo from './assets/gitLogo.svg';
 import chaiLogo from './assets/chailogo.svg';
 import jestLogo from './assets/jestlogo.svg';
-import enzymeLogo from './assets/enzymelogo.svg';
+import enzymeLogo from './assets/enzymelogo.png';
 import mochaLogo from './assets/mochalogo.svg';
+import jasmineLogo from './assets/jasminelogo.svg';
 
-export const techStackArray = [
-  {
-    logo: cssLogo,
-     name: 'CSS3'
-  },
-  {
-    logo: es6,
-    name: 'ES6'
-  },
+const techStackArray = [
   {
     logo: htmlLogo,
     name: 'HTML5'
   },
   {
-    logo: jqueryLogo,
-    name: 'jQuery'
+    logo: cssLogo,
+     name: 'CSS3'
+  },
+  {
+    logo: sassLogo,
+    name: 'SASS'
   },
   {
     logo: jsLogo,
     name: 'JavaScript'
   },
   {
-    logo: knexLogo,
-    name: 'Knex.js'
+    logo: es6Logo,
+    name: 'ES6'
+  },
+  {
+    logo: jqueryLogo,
+    name: 'jQuery'
   },
   {
     logo: nodeJSLogo,
     name: 'Node.js'
   },
   {
+    logo: expressLogo,
+    name: 'Express.js'
+  },
+  {
+    logo: knexLogo,
+    name: 'Knex.js'
+  },
+  {
     logo: reactLogo,
     name: 'React.js'
   },
   {
-    logo: reduxlogo,
+    logo: reduxLogo,
     name: 'Redux'
   },
   {
@@ -59,34 +68,33 @@ export const techStackArray = [
     name: 'React Router'
   },
   {
-    logo: sassLogo,
-    name: 'SASS'
-  },
-  {
     logo: sqlLogo,
     name: 'PostgreSQL'
   },
   {
-    logo: expressLogo,
-    name: 'Express.js'
-  }
+    logo: gitLogo,
+    name: 'Git'
+ },
+ {
+   logo: chaiLogo,
+   name: 'Chai'
+ },
+ {
+   logo: mochaLogo,
+   name: 'Mocha'
+ },
+ {
+   logo: jestLogo,
+   name: 'Jest'
+ },
+ {
+   logo: enzymeLogo,
+   name: 'Enzyme'
+ },
+ {
+   logo: jasmineLogo,
+   name: 'Jasmine'
+ }
 ];
 
-export const testStackArray = [
-  {
-    logo: chaiLogo,
-    name: 'Chai'
-  },
-  {
-    logo: mochaLogo,
-    name: 'Mocha'
-  },
-  {
-    logo: jestLogo,
-    name: 'Jest'
-  },
-  {
-    logo: enzymeLogo,
-    name: 'Enzyme'
-  }
-];
+export default techStackArray;

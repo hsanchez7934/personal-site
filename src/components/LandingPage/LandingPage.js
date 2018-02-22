@@ -6,6 +6,8 @@ import linkedinIcon from '../../assets/linkedin-icon.svg';
 import linkedinIconHover from '../../assets/linkedin-icon-hover.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import githubIconHover from '../../assets/github-icon-hover.svg';
+import techStackArray from '../../techStack.js';
+
 
 export default class LandingPage extends Component {
   constructor() {
@@ -22,6 +24,27 @@ export default class LandingPage extends Component {
       [query]: icon
     });
   };
+
+  backgroundImage = (url) => ({
+    backgroundImage: 'url(' + url + ')',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+  })
+
+  createSkillBoxes = (array) => (
+    array.map( (skill, index) => {
+      return (
+        <article className='logo-box'>
+          <div
+            style={this.backgroundImage(skill.logo)}
+            className='logo-container'>
+          </div>
+          <p className='skill-name'>{skill.name}</p>
+        </article>
+      )
+    })
+  );
 
   render() {
     const { linkedin, github, liClass, outOfFocus } = this.state;
@@ -83,6 +106,7 @@ export default class LandingPage extends Component {
             deepest yearnings of the human soul
           </h2>
         </header>
+
         <main>
           <section id='image-container'>
             <img
@@ -104,37 +128,46 @@ export default class LandingPage extends Component {
               to better their lives through the use of technology.
 
             </p>
-
-            <h3 className='titles'>Skills</h3>
-            <section id='skills-box'>
-
-            </section>
-
           </section>
-          <footer id='landing-page-footer'>
-            <ul id='footer-links'>
-              <li className='footer-links-li'>HOME</li>
-              <li className='footer-links-li'>PORTFOLIO</li>
-              <li className='footer-links-li'>RESUME</li>
-              <li className='footer-links-li'>CONTACT</li>
-            </ul>
-            <div id='footer-social-media'>
-              <img
-                src={linkedin}
-                alt='LinkedIn icon.'
-                className='social-media-icons'
-                onMouseEnter={() => this.iconChange('linkedin', linkedinIconHover)}
-                onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}
-              />
-              <img
-                src={github}
-                alt='GitHub icon.'
-                className='social-media-icons'
-                onMouseEnter={() => this.iconChange('github', githubIconHover)}
-                onMouseLeave={() => this.iconChange('github', githubIcon)} />
-            </div>
-          </footer>
+
+          <section id='skills'>
+            <h3 id='skills-title'>Proficient with...</h3>
+            <section id='skills-box'>
+              {
+                this.createSkillBoxes(techStackArray)
+              }
+            </section>
+            <h3 className='titles'>Education</h3>
+          </section>
+
+          <section id='education'>
+            
+          </section>
+
         </main>
+        <footer id='landing-page-footer'>
+          <ul id='footer-links'>
+            <li className='footer-links-li'>HOME</li>
+            <li className='footer-links-li'>PORTFOLIO</li>
+            <li className='footer-links-li'>RESUME</li>
+            <li className='footer-links-li'>CONTACT</li>
+          </ul>
+          <div id='footer-social-media'>
+            <img
+              src={linkedin}
+              alt='LinkedIn icon.'
+              className='social-media-icons'
+              onMouseEnter={() => this.iconChange('linkedin', linkedinIconHover)}
+              onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}
+            />
+            <img
+              src={github}
+              alt='GitHub icon.'
+              className='social-media-icons'
+              onMouseEnter={() => this.iconChange('github', githubIconHover)}
+              onMouseLeave={() => this.iconChange('github', githubIcon)} />
+          </div>
+        </footer>
       </div>
     );
   }
