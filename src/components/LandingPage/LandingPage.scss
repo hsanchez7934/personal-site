@@ -42,6 +42,11 @@ video {
   padding-right: 100px;
 }
 
+.router-nav-links {
+  color: $white;
+  opacity: 0.9;
+}
+
 .nav-links-li {
   display: inline-block;
   list-style: none;
@@ -111,7 +116,7 @@ main {
 #name {
   margin: 0px 0px 0px;
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -125,28 +130,39 @@ main {
 #about-me {
   height: 15%;
   // background-color: orange;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding: 30px 0px 10px;
   width: 80%;
   margin: 0 auto;
 }
 
-.titles {
-  // background-color: pink;
-  // width: 50%;
+#about-me-title {
   margin: 0;
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 500;
+  height: 10%;
 }
 
-.titles-text {
+#titles-text1 {
   // background-color: pink;
   // width: 60%;
-  margin: 30px auto 70px auto;
-  text-align: center;
+  height: 45%;
+  margin: 0;
+  text-align: left;
   font-size: 1.8em;
   font-weight: 400;
+  padding: 20px 0px 0px;
+}
+
+#titles-text2 {
+  // background-color: pink;
+  // width: 60%;
+  margin: 0;
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 400;
+  height: 45%;
+  // padding: 10px 0px 0px;
 }
 
 #skills {
@@ -161,7 +177,7 @@ main {
   // margin: 0 auto;
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 500;
   height: 5%;
   margin: 0;
   // background-color: yellow;
@@ -175,12 +191,12 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px;
+  padding: 50px 0px 0px;
 }
 
 .logo-box {
-  height: 16%;
-  width: 16%;
+  height: 15%;
+  width: 15%;
   margin: 0px 25px;
   // background-color: blue;
 }
@@ -199,18 +215,74 @@ main {
   padding-top: 10px;
 }
 
+#link-to-portfolio {
+  width: 100%;
+  height: 10%;
+  // background-color: red;
+}
+
+#portfolio-button-link {
+  width: 20%;
+  height: 30%;
+  display: block;
+  margin-bottom: 100px;
+}
+
+#ltp-button {
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  color: $black;
+  font-size: 1.2em;
+  border: 3px solid $black;
+}
+
+#ltp-button:hover {
+  cursor: pointer;
+  background-color: #222226;
+  // transition-duration: 0.3s;
+  color: $white;
+  border: 0;
+}
+
+#portfolio-icon {
+  height: 23px;
+  width: 23px;
+  position: relative;
+  top: 3px;
+  right: 10px;
+}
+
+#ltp-text {
+  text-align: center;
+  height: 30%;
+  font-size: 2.2em;
+  // background-color: pink;
+  margin: 0;
+  font-weight: 500;
+}
+
+#ltp-button-box {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #education {
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
-  height: 13%;
-  // background-color: purple;
+  height: 15%;
+  background-color: #EDEEEF;
+  padding: 30px 0px 30px;
 }
 
 #education-title {
   margin: 0;
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 500;
   height: 10%;
   // background-color: yellow;
 }
@@ -241,6 +313,8 @@ main {
   font-size: 1.5em;
   font-weight: 500;
   text-decoration: underline;
+  text-align: right;
+  padding-right: 50px;
 }
 
 #school-date {
@@ -249,6 +323,8 @@ main {
   height: 5%;
   font-size: 1.2em;
   font-weight: 400;
+  text-align: right;
+  padding-right: 50px;
 }
 
 #achieved {
@@ -266,6 +342,7 @@ main {
   height: 40%;
   font-size: 1.5em;
   // font-weight: 400;
+  padding-right: 40px;
 }
 
 #school-link-box {
@@ -277,32 +354,25 @@ main {
   justify-content: center;
 }
 
-#dat-button {
+#school-url {
+  border: 3px solid $black;
+  background-color: inherit;
+  height: 55%;
+  width: 20%;
   display: block;
-  width: 30%;
-  height: 50%;
-  margin: 0 auto;
-  border: 0;
+  color: $black;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding-top: 25px;
+  font-weight: 400;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+#school-url:hover {
+  color: $white;
   background-color: #222226;
 }
-
-#dat-button:hover {
-  cursor: pointer;
-  background-color: #787479;
-}
-
-#school-url {
-  background-color: inherit;
-  height: 100%;
-  width: 100%;
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-size: 1.9em;
-  padding-top: 20px;
-  font-weight: 400;
-}
-
 
 // FOOTER STUFF
 

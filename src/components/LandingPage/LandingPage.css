@@ -33,6 +33,10 @@ video {
   color: #fff;
   padding-right: 100px; }
 
+.router-nav-links {
+  color: #fff;
+  opacity: 0.9; }
+
 .nav-links-li {
   display: inline-block;
   list-style: none;
@@ -89,7 +93,7 @@ main {
 #name {
   margin: 0px 0px 0px;
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center; }
 
 #title {
@@ -100,22 +104,31 @@ main {
 
 #about-me {
   height: 15%;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding: 30px 0px 10px;
   width: 80%;
   margin: 0 auto; }
 
-.titles {
+#about-me-title {
   margin: 0;
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600; }
+  font-weight: 500;
+  height: 10%; }
 
-.titles-text {
-  margin: 30px auto 70px auto;
-  text-align: center;
+#titles-text1 {
+  height: 45%;
+  margin: 0;
+  text-align: left;
   font-size: 1.8em;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 20px 0px 0px; }
+
+#titles-text2 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 400;
+  height: 45%; }
 
 #skills {
   height: 50%;
@@ -125,7 +138,7 @@ main {
 #skills-title {
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 500;
   height: 5%;
   margin: 0; }
 
@@ -136,11 +149,11 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px; }
+  padding: 50px 0px 0px; }
 
 .logo-box {
-  height: 16%;
-  width: 16%;
+  height: 15%;
+  width: 15%;
   margin: 0px 25px; }
 
 .logo-container {
@@ -155,16 +168,63 @@ main {
   margin: 0;
   padding-top: 10px; }
 
+#link-to-portfolio {
+  width: 100%;
+  height: 10%; }
+
+#portfolio-button-link {
+  width: 20%;
+  height: 30%;
+  display: block;
+  margin-bottom: 100px; }
+
+#ltp-button {
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  color: #000;
+  font-size: 1.2em;
+  border: 3px solid #000; }
+
+#ltp-button:hover {
+  cursor: pointer;
+  background-color: #222226;
+  color: #fff;
+  border: 0; }
+
+#portfolio-icon {
+  height: 23px;
+  width: 23px;
+  position: relative;
+  top: 3px;
+  right: 10px; }
+
+#ltp-text {
+  text-align: center;
+  height: 30%;
+  font-size: 2.2em;
+  margin: 0;
+  font-weight: 500; }
+
+#ltp-button-box {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 #education {
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
-  height: 13%; }
+  height: 15%;
+  background-color: #EDEEEF;
+  padding: 30px 0px 30px; }
 
 #education-title {
   margin: 0;
   text-align: center;
   font-size: 2.2em;
-  font-weight: 600;
+  font-weight: 500;
   height: 10%; }
 
 #school-info-box {
@@ -185,13 +245,17 @@ main {
   height: 5%;
   font-size: 1.5em;
   font-weight: 500;
-  text-decoration: underline; }
+  text-decoration: underline;
+  text-align: right;
+  padding-right: 50px; }
 
 #school-date {
   margin: 15px 0px 0px;
   height: 5%;
   font-size: 1.2em;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: right;
+  padding-right: 50px; }
 
 #achieved {
   margin: 40px 0px 0px;
@@ -203,7 +267,8 @@ main {
 #achieved-text {
   margin: 20px 0px 0px;
   height: 40%;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  padding-right: 40px; }
 
 #school-link-box {
   width: 100%;
@@ -212,28 +277,23 @@ main {
   align-items: center;
   justify-content: center; }
 
-#dat-button {
-  display: block;
-  width: 30%;
-  height: 50%;
-  margin: 0 auto;
-  border: 0;
-  background-color: #222226; }
-
-#dat-button:hover {
-  cursor: pointer;
-  background-color: #787479; }
-
 #school-url {
+  border: 3px solid #000;
   background-color: inherit;
-  height: 100%;
-  width: 100%;
+  height: 55%;
+  width: 20%;
   display: block;
-  color: white;
+  color: #000;
   text-decoration: none;
-  font-size: 1.9em;
-  padding-top: 20px;
-  font-weight: 400; }
+  font-size: 1.2em;
+  padding-top: 25px;
+  font-weight: 400;
+  margin: 0 auto 100px;
+  text-align: center; }
+
+#school-url:hover {
+  color: #fff;
+  background-color: #222226; }
 
 #landing-page-footer {
   width: 100%;

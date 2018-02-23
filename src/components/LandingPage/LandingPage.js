@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import './LandingPage.css';
 import video from '../../assets/denverhero.mp4';
 import photo from '../../assets/photo1.jpg';
+import portfolioIcon from '../../assets/briefcase.svg';
+import portfolioIconBlack from '../../assets/briefcase-black.svg';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import linkedinIconHover from '../../assets/linkedin-icon-hover.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import githubIconHover from '../../assets/github-icon-hover.svg';
 import techStackArray from '../../techStack.js';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 export default class LandingPage extends Component {
@@ -15,7 +18,8 @@ export default class LandingPage extends Component {
     this.state = {
       linkedin: linkedinIcon,
       github: githubIcon,
-      liClass: 'nav-links-li'
+      liClass: 'nav-links-li',
+      briefcase: portfolioIconBlack
     };
   }
 
@@ -47,52 +51,55 @@ export default class LandingPage extends Component {
   );
 
   render() {
-    const { linkedin, github, liClass, outOfFocus } = this.state;
+    const { linkedin, github, liClass, outOfFocus, briefcase } = this.state;
 
     return (
       <div className='landing-page-container'>
         <nav id='landing-page-nav'>
+
           <ul id='nav-links'>
-            <li
-              className={liClass}
-              onMouseEnter={
-                () => this.iconChange('liClass', 'nav-links-li out-of-focus')
-              }
-              onMouseLeave={
-                () => this.iconChange('liClass', 'nav-links-li')
-              }>
-              HOME
-            </li>
-            <li
-              className={liClass}
-              onMouseEnter={
-                () => this.iconChange('liClass', 'nav-links-li out-of-focus')
-              }
-              onMouseLeave={
-                () => this.iconChange('liClass', 'nav-links-li')
-              }>
-              PORTFOLIO
-            </li>
-            <li
-              className={liClass}
-              onMouseEnter={
-                () => this.iconChange('liClass', 'nav-links-li out-of-focus')
-              }
-              onMouseLeave={
-                () => this.iconChange('liClass', 'nav-links-li')
-              }>
-              RESUME
-            </li>
-            <li
-              className={liClass}
-              onMouseEnter={
-                () => this.iconChange('liClass', 'nav-links-li out-of-focus')
-              }
-              onMouseLeave={
-                () => this.iconChange('liClass', 'nav-links-li')
-              }>
-              CONTACT
-            </li>
+            <Link
+              to={'/'}
+              className='router-nav-links'>
+              <li
+                className={liClass}
+                onMouseEnter={
+                  () => this.iconChange('liClass', 'nav-links-li out-of-focus')
+                }
+                onMouseLeave={
+                  () => this.iconChange('liClass', 'nav-links-li')
+                }>
+                HOME
+              </li>
+            </Link>
+            <Link
+              to={'portfolio'}
+              className='router-nav-links'>
+              <li
+                className={liClass}
+                onMouseEnter={
+                  () => this.iconChange('liClass', 'nav-links-li out-of-focus')
+                }
+                onMouseLeave={
+                  () => this.iconChange('liClass', 'nav-links-li')
+                }>
+                PORTFOLIO
+              </li>
+            </Link>
+            <Link
+              to={'contact'}
+              className='router-nav-links'>
+              <li
+                className={liClass}
+                onMouseEnter={
+                  () => this.iconChange('liClass', 'nav-links-li out-of-focus')
+                }
+                onMouseLeave={
+                  () => this.iconChange('liClass', 'nav-links-li')
+                }>
+                CONTACT
+              </li>
+            </Link>
           </ul>
         </nav>
         <header className='landing-page-hero'>
@@ -120,13 +127,22 @@ export default class LandingPage extends Component {
           </section>
           <section id='about-me'>
 
-            <h3 className='titles'>About Me</h3>
-            <p className='titles-text'>
+            <h3 id='about-me-title'>Who I am</h3>
+            <p id='titles-text1'>
               My passion lies in designing applications that
               provide people with the best user experience possible.
-              I'm driven by the need to create the opportunity for others
+              I am driven by the need to create the opportunity for others
               to better their lives through the use of technology.
-
+              The skills that I have gained at the Turing School of Software
+              and Design have prepared me to hit the ground running and
+              contribute to a development team.
+            </p>
+            <p id='titles-text2'>
+              I love what I do and I'm excited to see how
+              I can add value to your company and team
+              with my technical skills, my empathetic nature towards
+              others, my ability to relate with people at
+              a professional level, and my keen problem solving abilities.
             </p>
           </section>
 
@@ -136,6 +152,27 @@ export default class LandingPage extends Component {
               {
                 this.createSkillBoxes(techStackArray)
               }
+            </div>
+          </section>
+          <section id='link-to-portfolio'>
+            <p id='ltp-text'>
+              View my portfolio to review my recent work
+            </p>
+            <div id='ltp-button-box'>
+              <Link
+                to={'/portfolio'}
+                id='portfolio-button-link'>
+                <button
+                  id='ltp-button'
+                  onMouseEnter={ () => this.iconChange('briefcase', portfolioIcon)}
+                  onMouseLeave={() => this.iconChange('briefcase', portfolioIconBlack)}>
+                  <img
+                    src={briefcase}
+                    alt='Portfolio button icon.'
+                    id='portfolio-icon' />
+                    PORTFOLIO
+                </button>
+              </Link>
             </div>
           </section>
 
@@ -163,13 +200,11 @@ export default class LandingPage extends Component {
               </div>
             </div>
             <div id='school-link-box'>
-              <button id='dat-button'>
                 <a
                   id='school-url'
                   href="https://www.turing.io/alumni/hector-sanchez">
-                  Visit Alumni Page
+                  VISIT ALUMNI PAGE
                 </a>
-              </button>
             </div>
           </section>
 
@@ -178,7 +213,6 @@ export default class LandingPage extends Component {
           <ul id='footer-links'>
             <li className='footer-links-li'>HOME</li>
             <li className='footer-links-li'>PORTFOLIO</li>
-            <li className='footer-links-li'>RESUME</li>
             <li className='footer-links-li'>CONTACT</li>
           </ul>
           <div id='footer-social-media'>
