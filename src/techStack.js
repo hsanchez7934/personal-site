@@ -94,6 +94,10 @@ const techStackArray = [
  {
    logo: jasmineLogo,
    name: 'Jasmine'
+ },
+ {
+   logo: '',
+   name: ''
  }
 ];
 

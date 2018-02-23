@@ -133,8 +133,8 @@ main {
 
 .titles {
   // background-color: pink;
-  width: 50%;
-  margin: 0 auto;
+  // width: 50%;
+  margin: 0;
   text-align: center;
   font-size: 2.2em;
   font-weight: 600;
@@ -202,9 +202,107 @@ main {
 #education {
   width: 65%;
   margin: 0 auto;
-  height: 25%;
-  background-color: purple;
+  height: 13%;
+  // background-color: purple;
 }
+
+#education-title {
+  margin: 0;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 600;
+  height: 10%;
+  // background-color: yellow;
+}
+
+#school-info-box {
+  // background-color: red;
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+#school-info-box-left {
+  // background-color: green;
+  width: 50%;
+  height: 100%;
+}
+
+#school-info-box-right {
+  // background-color: blue;
+  width: 50%;
+  height: 100%;
+}
+
+#school-title {
+  // background-color: orange;
+  margin: 40px 0px 0px;
+  height: 5%;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#school-date {
+  // background-color: pink;
+  margin: 15px 0px 0px;
+  height: 5%;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+#achieved {
+  // background-color: pink;
+  margin: 40px 0px 0px;
+  height: 5%;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#achieved-text {
+  // background-color: pink;
+  margin: 20px 0px 0px;
+  height: 40%;
+  font-size: 1.5em;
+  // font-weight: 400;
+}
+
+#school-link-box {
+  width: 100%;
+  height: 30%;
+  // background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dat-button {
+  display: block;
+  width: 30%;
+  height: 50%;
+  margin: 0 auto;
+  border: 0;
+  background-color: #222226;
+}
+
+#dat-button:hover {
+  cursor: pointer;
+  background-color: #787479;
+}
+
+#school-url {
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.9em;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
 
 // FOOTER STUFF
 

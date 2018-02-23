@@ -132,16 +132,45 @@ export default class LandingPage extends Component {
 
           <section id='skills'>
             <h3 id='skills-title'>Proficient with...</h3>
-            <section id='skills-box'>
+            <div id='skills-box'>
               {
                 this.createSkillBoxes(techStackArray)
               }
-            </section>
-            <h3 className='titles'>Education</h3>
+            </div>
           </section>
 
           <section id='education'>
-            
+            <h3 id='education-title'>Education</h3>
+            <div id='school-info-box'>
+              <div id='school-info-box-left'>
+                <h3 id='school-title'>
+                  Turing School of Software & Design
+                </h3>
+                <p id='school-date'>
+                  March 2017 - January 2018
+                </p>
+              </div>
+              <div id='school-info-box-right'>
+                <p id='achieved'>
+                  Front-End Engineering
+                </p>
+                <p id='achieved-text'>
+                  Trained in fundamental web technologies,
+                  web development with JavaScript, professional
+                  client-side development, and desktop and
+                  mobile applications with web technologies.
+                </p>
+              </div>
+            </div>
+            <div id='school-link-box'>
+              <button id='dat-button'>
+                <a
+                  id='school-url'
+                  href="https://www.turing.io/alumni/hector-sanchez">
+                  Visit Alumni Page
+                </a>
+              </button>
+            </div>
           </section>
 
         </main>
