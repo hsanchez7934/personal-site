@@ -45,12 +45,12 @@ video {
 .router-nav-links {
   color: $white;
   opacity: 0.9;
+  margin-left: 100px;
 }
 
 .nav-links-li {
   display: inline-block;
   list-style: none;
-  margin-left: 100px;
   font-size: 1.2em;
 }
 
@@ -128,9 +128,9 @@ main {
 }
 
 #about-me {
-  height: 15%;
+  height: 12%;
   // background-color: orange;
-  padding: 30px 0px 10px;
+  padding: 50px 0px 10px;
   width: 80%;
   margin: 0 auto;
 }
@@ -146,23 +146,12 @@ main {
 #titles-text1 {
   // background-color: pink;
   // width: 60%;
-  height: 45%;
+  height: 90%;
   margin: 0;
-  text-align: left;
+  text-align: center;
   font-size: 1.8em;
   font-weight: 400;
   padding: 20px 0px 0px;
-}
-
-#titles-text2 {
-  // background-color: pink;
-  // width: 60%;
-  margin: 0;
-  text-align: left;
-  font-size: 1.8em;
-  font-weight: 400;
-  height: 45%;
-  // padding: 10px 0px 0px;
 }
 
 #skills {
@@ -202,12 +191,12 @@ main {
 }
 
 .logo-container {
-  height: 70%;
+  height: 60%;
   width: 100%;
 }
 
 .skill-name {
-  height: 30%;
+  height: 40%;
   width: 100%;
   text-align: center;
   font-size: 1.5em;
@@ -217,15 +206,15 @@ main {
 
 #link-to-portfolio {
   width: 100%;
-  height: 10%;
+  height: 13%;
   // background-color: red;
 }
 
 #portfolio-button-link {
   width: 20%;
-  height: 30%;
+  height: 25%;
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 #ltp-button {
@@ -395,10 +384,17 @@ main {
   color: #fff;
   list-style: none;
   display: inline-block;
+  font-size: 1.2em;
+}
+
+.footer-links-li:hover {
+  color: $datblue;
+  text-decoration: underline;
+}
+
+.router-footer-nav-links {
   margin-left: 70px;
   margin-right: 70px;
-  font-size: 1.2em;
-
 }
 
 #footer-social-media {
@@ -413,9 +409,84 @@ main {
 .social-media-icons {
   height: 50px;
   width: 50px;
-  margin: 0px 50px;
+  margin: 0px 90px;
 }
 
 .social-media-icons:hover {
   cursor: pointer;
+}
+
+.swing:hover
+{
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }

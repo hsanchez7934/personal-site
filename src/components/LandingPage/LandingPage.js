@@ -133,13 +133,8 @@ export default class LandingPage extends Component {
               provide people with the best user experience possible.
               I am driven by the need to create the opportunity for others
               to better their lives through the use of technology.
-              The skills that I have gained at the Turing School of Software
-              and Design have prepared me to hit the ground running and
-              contribute to a development team.
-            </p>
-            <p id='titles-text2'>
               I love what I do and I'm excited to see how
-              I can add value to your company and team
+              I can add value to your company, team, or project
               with my technical skills, my empathetic nature towards
               others, my ability to relate with people at
               a professional level, and my keen problem solving abilities.
@@ -161,11 +156,11 @@ export default class LandingPage extends Component {
             <div id='ltp-button-box'>
               <Link
                 to={'/portfolio'}
-                id='portfolio-button-link'>
+                id='portfolio-button-link'
+                onMouseEnter={ () => this.iconChange('briefcase', portfolioIcon)}
+                onMouseLeave={() => this.iconChange('briefcase', portfolioIconBlack)}>
                 <button
-                  id='ltp-button'
-                  onMouseEnter={ () => this.iconChange('briefcase', portfolioIcon)}
-                  onMouseLeave={() => this.iconChange('briefcase', portfolioIconBlack)}>
+                  id='ltp-button'>
                   <img
                     src={briefcase}
                     alt='Portfolio button icon.'
@@ -211,24 +206,44 @@ export default class LandingPage extends Component {
         </main>
         <footer id='landing-page-footer'>
           <ul id='footer-links'>
-            <li className='footer-links-li'>HOME</li>
-            <li className='footer-links-li'>PORTFOLIO</li>
-            <li className='footer-links-li'>CONTACT</li>
+            <Link
+              to={'/'}
+              className='router-footer-nav-links'>
+                  <li className='footer-links-li'>
+                    HOME
+                  </li>
+            </Link>
+            <Link
+              to={'/portfolio'}
+              className='router-footer-nav-links'>
+              <li className='footer-links-li'>
+                PORTFOLIO
+              </li>
+            </Link>
+            <Link
+              to={'/contact'}
+              className='router-footer-nav-links'>
+              <li className='footer-links-li'>
+                CONTACT
+              </li>
+            </Link>
           </ul>
           <div id='footer-social-media'>
-            <img
-              src={linkedin}
+            <a
+              href='https://www.linkedin.com/in/hector-a-sanchez/'
+              style={this.backgroundImage(linkedin)}
               alt='LinkedIn icon.'
-              className='social-media-icons'
+              className='social-media-icons swing'
               onMouseEnter={() => this.iconChange('linkedin', linkedinIconHover)}
-              onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}
-            />
-            <img
-              src={github}
-              alt='GitHub icon.'
-              className='social-media-icons'
+              onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}>
+            </a>
+            <a
+              href='https://github.com/hsanchez7934'
+              style={this.backgroundImage(github)}
+              className='social-media-icons swing'
               onMouseEnter={() => this.iconChange('github', githubIconHover)}
-              onMouseLeave={() => this.iconChange('github', githubIcon)} />
+              onMouseLeave={() => this.iconChange('github', githubIcon)}>
+            </a>
           </div>
         </footer>
       </div>
