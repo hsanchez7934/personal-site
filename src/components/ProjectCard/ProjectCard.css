@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
 .project-card {
   width: 90%;
-  height: 80%;
+  height: 800px;
   margin: 100px auto;
-  border: 3px ridge #222226;
   display: flex; }
 
 .project-image {
@@ -12,7 +11,10 @@
 
 .project-info-box {
   height: 100%;
-  width: 60%; }
+  width: 60%;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000; }
 
 .project-title {
   margin: 0;
@@ -86,4 +88,24 @@
 .projects-buttons-box {
   width: 100%;
   height: 40%;
-  background-color: green; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.project-links {
+  display: block;
+  text-decoration: none;
+  border: 3px solid #000;
+  width: 35%;
+  height: 25%;
+  margin: 15px 0px;
+  text-align: center;
+  padding: 25px;
+  font-size: 1.2em;
+  color: #000; }
+
+.project-links:hover {
+  background-color: #222226;
+  color: #fff;
+  border: 0; }

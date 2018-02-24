@@ -79,7 +79,7 @@ video {
 /*----------------------------------------
 >>>>>>>>  NAV & HEADER - END  <<<<<<<<
 ----------------------------------------*/
-main {
+#landingpage-main {
   width: 100%;
   height: 3450px; }
 
@@ -307,96 +307,6 @@ main {
 #school-url:hover {
   color: #fff;
   background-color: #222226; }
-
-/*----------------------------------------
-    >>>>>>>>  FOOTER  <<<<<<<<
-----------------------------------------*/
-#landing-page-footer {
-  width: 100%;
-  height: 400px;
-  background-color: #222226;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-
-#footer-links {
-  margin: 0px 0px 50px 0px; }
-
-.footer-links-li {
-  color: #fff;
-  list-style: none;
-  display: inline-block;
-  font-size: 1.2em; }
-
-.footer-links-li:hover {
-  color: #42e8f4;
-  text-decoration: underline; }
-
-.router-footer-nav-links {
-  margin-left: 70px;
-  margin-right: 70px; }
-
-#footer-social-media {
-  height: 50px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.social-media-icons {
-  height: 50px;
-  width: 50px;
-  margin: 0px 90px; }
-
-.social-media-icons:hover {
-  cursor: pointer; }
-
-.swing:hover {
-  -webkit-animation: swing 1s ease;
-  animation: swing 1s ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
-
-@-webkit-keyframes swing {
-  15% {
-    -webkit-transform: translateX(5px);
-    transform: translateX(5px); }
-  30% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px); }
-  50% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px); }
-  65% {
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px); }
-  80% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px); }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
-
-@keyframes swing {
-  15% {
-    -webkit-transform: translateX(5px);
-    transform: translateX(5px); }
-  30% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px); }
-  50% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px); }
-  65% {
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px); }
-  80% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px); }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
 
 @-webkit-keyframes fadeIn {
   from {

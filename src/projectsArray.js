@@ -47,7 +47,7 @@ const projectsArray = [
        'Enzyme',
        'Jest',
        'fetchMock'
-     ]
+     ],
      githubLink: 'https://github.com/hsanchez7934/swapibox',
      liveAppLink: 'https://swappi-box-hs-12-30-2018.herokuapp.com'
   },
@@ -82,7 +82,7 @@ const projectsArray = [
       'PostreSQL',
       'Mocha',
       'Chai'
-    ]
+    ],
     githubLink: 'https://github.com/hsanchez7934/hs-palette-picker',
     liveAppLink: 'https://hs-palette-picker-12-1-17.herokuapp.com/'
   },
@@ -106,7 +106,7 @@ const projectsArray = [
       'React.js',
       'Enzyme',
       'Jest'
-    ]
+    ],
     githubLink: 'https://github.com/hsanchez7934/headcount2.0',
     liveAppLink: 'https://headcount-hs-1-30-2018.herokuapp.com/'
   },
@@ -135,7 +135,7 @@ const projectsArray = [
       'React.js',
       'Enzyme',
       'Jest'
-    ]
+    ],
     githubLink: 'https://github.com/hsanchez7934/weatherly',
     liveAppLink: 'https://weathrly-hs-1-22-18.herokuapp.com/'
   }

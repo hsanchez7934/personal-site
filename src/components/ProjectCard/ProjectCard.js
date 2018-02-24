@@ -16,7 +16,7 @@ const createStackListItems = (array) => (
   })
 );
 
-const createLinkButton = (link1, link2) => (
+const createLinkButtons = (link1, link2) => (
   <div className='projects-buttons-box'>
     <a
       href={link1}
@@ -57,9 +57,10 @@ const ProjectCard = ({ project }) => (
           </ul>
         </div>
       </div>
-
+      {
+        createLinkButtons(project.githubLink, project.liveAppLink)
+      }
     </div>
-
   </article>
 );
 

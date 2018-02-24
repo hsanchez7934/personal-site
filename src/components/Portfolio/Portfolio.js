@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar.js';
 import projectsArray from '../../projectsArray.js';
 import ProjectCard from '../ProjectCard/ProjectCard.js';
+import Footer from '../Footer/Footer.js';
 
 export default class Portfolio extends Component {
 
@@ -15,7 +16,6 @@ export default class Portfolio extends Component {
   );
 
   render() {
-    console.log(projectsArray);
     return(
       <section id='portfolio-container'>
         <header id='portfolio-header'>
@@ -47,8 +47,8 @@ export default class Portfolio extends Component {
               this.createProjectCards()
             }
           </section>
-
         </main>
+        <Footer />
       </section>
     )
   }

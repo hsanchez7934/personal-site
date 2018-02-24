@@ -4,19 +4,14 @@ import video from '../../assets/denverhero.mp4';
 import photo from '../../assets/photo1.jpg';
 import portfolioIcon from '../../assets/briefcase.svg';
 import portfolioIconBlack from '../../assets/briefcase-black.svg';
-import linkedinIcon from '../../assets/linkedin-icon.svg';
-import linkedinIconHover from '../../assets/linkedin-icon-hover.svg';
-import githubIcon from '../../assets/github-icon.svg';
-import githubIconHover from '../../assets/github-icon-hover.svg';
 import techStackArray from '../../techStack.js';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer.js';
 
 export default class LandingPage extends Component {
   constructor() {
     super();
     this.state = {
-      linkedin: linkedinIcon,
-      github: githubIcon,
       liClass: 'nav-links-li',
       briefcase: portfolioIconBlack
     };
@@ -116,7 +111,7 @@ export default class LandingPage extends Component {
           </h2>
         </header>
 
-        <main>
+        <main id='landingpage-main'>
           <section id='image-container'>
             <img
               src={photo}
@@ -207,50 +202,8 @@ export default class LandingPage extends Component {
                 </a>
             </div>
           </section>
-
         </main>
-        <footer id='landing-page-footer'>
-          <ul id='footer-links'>
-            <Link
-              to={'/'}
-              className='router-footer-nav-links'>
-                  <li className='footer-links-li'>
-                    HOME
-                  </li>
-            </Link>
-            <Link
-              to={'/portfolio'}
-              className='router-footer-nav-links'>
-              <li className='footer-links-li'>
-                PORTFOLIO
-              </li>
-            </Link>
-            <Link
-              to={'/contact'}
-              className='router-footer-nav-links'>
-              <li className='footer-links-li'>
-                CONTACT
-              </li>
-            </Link>
-          </ul>
-          <div id='footer-social-media'>
-            <a
-              href='https://www.linkedin.com/in/hector-a-sanchez/'
-              style={this.backgroundImage(linkedin)}
-              alt='LinkedIn icon.'
-              className='social-media-icons swing'
-              onMouseEnter={() => this.iconChange('linkedin', linkedinIconHover)}
-              onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}>
-            </a>
-            <a
-              href='https://github.com/hsanchez7934'
-              style={this.backgroundImage(github)}
-              className='social-media-icons swing'
-              onMouseEnter={() => this.iconChange('github', githubIconHover)}
-              onMouseLeave={() => this.iconChange('github', githubIcon)}>
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }
