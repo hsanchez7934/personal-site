@@ -9,8 +9,7 @@ import linkedinIconHover from '../../assets/linkedin-icon-hover.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import githubIconHover from '../../assets/github-icon-hover.svg';
 import techStackArray from '../../techStack.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 export default class LandingPage extends Component {
   constructor() {
@@ -108,9 +107,12 @@ export default class LandingPage extends Component {
               src={video}
               type='video/mp4' />
           </video>
-          <h2 id='quote'>
-            The desire to create is one of the
-            deepest yearnings of the human soul
+          <p className='quote fade-in one'>
+            the desire to create is one of the
+            deepest yearnings of the human soul...
+          </p>
+          <h2 id='landing-page-title'>
+            FRONT-END DEVELOPER
           </h2>
         </header>
 
@@ -123,7 +125,10 @@ export default class LandingPage extends Component {
           </section>
           <section id='intro-section'>
             <h2 id='name'>Hector A. Sanchez</h2>
-            <h3 id='title'>Front-End Developer</h3>
+            <p id='title'>
+              Snowboarder, avid reader, dog lover,
+              music junkie, coding ninja extraordinaire
+            </p>
           </section>
           <section id='about-me'>
 
@@ -151,7 +156,7 @@ export default class LandingPage extends Component {
           </section>
           <section id='link-to-portfolio'>
             <p id='ltp-text'>
-              View my portfolio to review my recent work
+              View my work as a Front-End developer
             </p>
             <div id='ltp-button-box'>
               <Link

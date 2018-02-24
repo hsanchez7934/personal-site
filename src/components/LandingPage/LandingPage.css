@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
 .landing-page-container {
   height: 100%;
   width: 100%;
   font-family: "Raleway", sans-serif; }
 
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - BEGIN  <<<<<<<<
+----------------------------------------*/
 #landing-page-nav {
   position: absolute;
   z-index: 10;
@@ -15,7 +19,7 @@
   justify-content: flex-end; }
 
 .landing-page-hero {
-  height: 700px;
+  height: 900px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -51,27 +55,43 @@ video {
   color: #42e8f4;
   cursor: pointer; }
 
-#quote {
+.quote {
   position: absolute;
   color: #fff;
-  font-size: 50px;
-  margin: 0px 0px 0px 0px;
+  font-size: 60px;
+  margin: 0;
   text-align: center;
   width: 70%;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-family: "Tangerine", cursive; }
 
+#landing-page-title {
+  font-weight: lighter;
+  position: absolute;
+  color: #fff;
+  opacity: 0.9;
+  margin: 0;
+  font-size: 90px;
+  width: 70%;
+  text-align: center;
+  margin-top: 80px; }
+
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - END  <<<<<<<<
+----------------------------------------*/
 main {
   width: 100%;
-  height: 3500px; }
+  height: 3450px; }
 
 #image-container {
-  height: 5%;
+  height: 4%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #EDEEEF; }
 
 #profile-pic {
-  top: 510px;
+  top: 730px;
   height: 350px;
   width: 370px;
   position: absolute;
@@ -80,24 +100,24 @@ main {
   border: 1px solid #222226; }
 
 #intro-section {
-  height: 5%;
+  height: 9%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #000;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  background-color: #EDEEEF; }
 
 #name {
-  margin: 0px 0px 0px;
+  margin: 0;
   font-size: 3em;
   font-weight: 500;
   text-align: center; }
 
 #title {
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px;
   font-size: 2em;
   font-weight: 100;
   text-align: center; }
@@ -124,7 +144,7 @@ main {
   padding: 20px 0px 0px; }
 
 #skills {
-  height: 50%;
+  height: 47%;
   width: 80%;
   margin: 0 auto; }
 
@@ -211,7 +231,7 @@ main {
   margin: 0 auto;
   height: 15%;
   background-color: #EDEEEF;
-  padding: 30px 0px 30px; }
+  padding: 30px 0px; }
 
 #education-title {
   margin: 0;
@@ -288,6 +308,9 @@ main {
   color: #fff;
   background-color: #222226; }
 
+/*----------------------------------------
+    >>>>>>>>  FOOTER  <<<<<<<<
+----------------------------------------*/
 #landing-page-footer {
   width: 100%;
   height: 400px;
@@ -374,3 +397,41 @@ main {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }

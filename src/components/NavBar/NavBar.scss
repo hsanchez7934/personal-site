@@ -1,0 +1,41 @@
+@import "../../styles/ralewayfont.scss";
+@import "../../styles/colors.scss";
+
+.header-component-nav {
+  font-family: $raleway;
+  // background-color: inherit;
+  height: 14%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  // background-color: $black;
+  // opacity: 0.9;
+}
+
+.router-nav-links {
+  color: $white;
+  opacity: 0.7;
+  margin-left: 100px;
+}
+
+.nav-links-li {
+  display: inline-block;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.out-of-focus {
+  color: $outoffocus;
+  transition-duration: 0.4s;
+}
+
+.nav-links-li:hover {
+  color: $datblue;
+  cursor: pointer;
+}
+
+.header-component-ul {
+  color: $white;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 100px 0px 0px;
+}

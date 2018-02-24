@@ -1,5 +1,6 @@
 @import "../../styles/ralewayfont.scss";
 @import "../../styles/colors.scss";
+@import "../../styles/tangerinefont.scss";
 
 .landing-page-container {
   height: 100%;
@@ -7,6 +8,9 @@
   font-family: $raleway;
 }
 
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - BEGIN  <<<<<<<<
+----------------------------------------*/
 #landing-page-nav {
   position: absolute;
   z-index: 10;
@@ -19,12 +23,11 @@
 }
 
 .landing-page-hero {
-  height: 700px;
+  height: 900px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
   background-color: #222226;
 }
 
@@ -32,13 +35,12 @@ video {
   min-width: 100%;
   min-height: 100%;
   object-fit: fill;
-  // position: absolute;
   height: 100%;
   width: 100%;
 }
 
 #nav-links {
-  color: #fff;
+  color: $white;
   padding-right: 100px;
 }
 
@@ -55,7 +57,7 @@ video {
 }
 
 .out-of-focus {
-  color: #8f9294;
+  color: $outoffocus;
   transition-duration: 0.4s;
 }
 
@@ -64,64 +66,80 @@ video {
   cursor: pointer;
 }
 
-#quote {
+.quote {
   position: absolute;
-  color: #fff;
-  font-size: 50px;
-  margin: 0px 0px 0px 0px;
+  color: $white;
+  font-size: 60px;
+  margin: 0;
   text-align: center;
   width: 70%;
   font-weight: lighter;
-  // background-color: pink;
+  font-family: $tangerine;
 }
+
+#landing-page-title {
+  font-weight: lighter;
+  position: absolute;
+  color: $white;
+  opacity: 0.9;
+  margin: 0;
+  font-size: 90px;
+  // background-color: pink;
+  width: 70%;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - END  <<<<<<<<
+----------------------------------------*/
+
+
 
 main {
   width: 100%;
-  height: 3500px;
-  // height: 60vh;
-  // background-color: pink;
+  height: 3450px;
 }
 
 #image-container {
-  height: 5%;
-  // background-color: red;
+  height: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $superlightgray;
 }
 
 #profile-pic {
-  top: 510px;
+  top: 730px;
   height: 350px;
   width: 370px;
   position: absolute;
   display: block;
   border-radius: 60%;
-  border: 1px solid #222226;
+  border: 1px solid $datbeautifulcharcoal;
 }
 
 #intro-section {
-  // background-color: green;
-  height: 5%;
+  height: 9%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid $black;
   padding-bottom: 0px;
+  background-color: $superlightgray;
 }
 
 #name {
-  margin: 0px 0px 0px;
+  margin: 0;
   font-size: 3em;
   font-weight: 500;
   text-align: center;
 }
 
 #title {
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px;
   font-size: 2em;
   font-weight: 100;
   text-align: center;
@@ -129,7 +147,6 @@ main {
 
 #about-me {
   height: 12%;
-  // background-color: orange;
   padding: 50px 0px 10px;
   width: 80%;
   margin: 0 auto;
@@ -144,8 +161,6 @@ main {
 }
 
 #titles-text1 {
-  // background-color: pink;
-  // width: 60%;
   height: 90%;
   margin: 0;
   text-align: center;
@@ -155,25 +170,20 @@ main {
 }
 
 #skills {
-  // background-color: magenta;
-  height: 50%;
+  height: 47%;
   width: 80%;
   margin: 0 auto;
 }
 
 #skills-title {
-  // width: 50%;
-  // margin: 0 auto;
   text-align: center;
   font-size: 2.2em;
   font-weight: 500;
   height: 5%;
   margin: 0;
-  // background-color: yellow;
 }
 
 #skills-box {
-  // background-color: pink;
   width: 100%;
   height: 95%;
   display: flex;
@@ -187,7 +197,6 @@ main {
   height: 15%;
   width: 15%;
   margin: 0px 25px;
-  // background-color: blue;
 }
 
 .logo-container {
@@ -207,7 +216,6 @@ main {
 #link-to-portfolio {
   width: 100%;
   height: 13%;
-  // background-color: red;
 }
 
 #portfolio-button-link {
@@ -228,8 +236,7 @@ main {
 
 #ltp-button:hover {
   cursor: pointer;
-  background-color: #222226;
-  // transition-duration: 0.3s;
+  background-color: $datbeautifulcharcoal;
   color: $white;
   border: 0;
 }
@@ -246,7 +253,6 @@ main {
   text-align: center;
   height: 30%;
   font-size: 2.2em;
-  // background-color: pink;
   margin: 0;
   font-weight: 500;
 }
@@ -263,8 +269,8 @@ main {
   width: 100%;
   margin: 0 auto;
   height: 15%;
-  background-color: #EDEEEF;
-  padding: 30px 0px 30px;
+  background-color: $superlightgray;
+  padding: 30px 0px;
 }
 
 #education-title {
@@ -273,30 +279,25 @@ main {
   font-size: 2.2em;
   font-weight: 500;
   height: 10%;
-  // background-color: yellow;
 }
 
 #school-info-box {
-  // background-color: red;
   width: 100%;
   height: 60%;
   display: flex;
 }
 
 #school-info-box-left {
-  // background-color: green;
   width: 50%;
   height: 100%;
 }
 
 #school-info-box-right {
-  // background-color: blue;
   width: 50%;
   height: 100%;
 }
 
 #school-title {
-  // background-color: orange;
   margin: 40px 0px 0px;
   height: 5%;
   font-size: 1.5em;
@@ -307,7 +308,6 @@ main {
 }
 
 #school-date {
-  // background-color: pink;
   margin: 15px 0px 0px;
   height: 5%;
   font-size: 1.2em;
@@ -317,7 +317,6 @@ main {
 }
 
 #achieved {
-  // background-color: pink;
   margin: 40px 0px 0px;
   height: 5%;
   font-size: 1.5em;
@@ -326,18 +325,15 @@ main {
 }
 
 #achieved-text {
-  // background-color: pink;
   margin: 20px 0px 0px;
   height: 40%;
   font-size: 1.5em;
-  // font-weight: 400;
   padding-right: 40px;
 }
 
 #school-link-box {
   width: 100%;
   height: 30%;
-  // background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,7 +359,9 @@ main {
   background-color: #222226;
 }
 
-// FOOTER STUFF
+/*----------------------------------------
+    >>>>>>>>  FOOTER  <<<<<<<<
+----------------------------------------*/
 
 #landing-page-footer {
   width: 100%;
@@ -376,7 +374,6 @@ main {
 }
 
 #footer-links {
-  // background-color: orange;
   margin: 0px 0px 50px 0px;
 }
 
@@ -398,7 +395,6 @@ main {
 }
 
 #footer-social-media {
-  // background-color: pink;
   height: 50px;
   width: 50%;
   display: flex;
@@ -489,4 +485,30 @@ main {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }

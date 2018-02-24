@@ -1,0 +1,109 @@
+@import "../../styles/ralewayfont.scss";
+@import "../../styles/colors.scss";
+
+.project-card {
+  width: 90%;
+  height: 80%;
+  margin: 100px auto;
+  border: 3px ridge $datbeautifulcharcoal;
+  display: flex;
+}
+
+.project-image {
+  height: 100%;
+  width: 40%;
+}
+
+.project-info-box {
+  height: 100%;
+  width: 60%;
+  // background-color: pink;
+}
+
+.project-title {
+  // background-color: blue;
+  margin: 0;
+  text-align: center;
+  height: 10%;
+  font-size: 2em;
+  font-weight: 400;
+  padding: 30px 0px 0px;
+}
+
+.project-description-box {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*----------------------------------------
+>>>>>>>>  project description section -left  <<<<<<<<
+----------------------------------------*/
+.pdb-left {
+  height: 90%;
+  width: 50%;
+  // background-color: red;
+  padding: 20px;
+  border-right: 1px solid $datbeautifulcharcoal;
+}
+
+.project-description-title {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  height: 10%;
+  border-bottom: 1px solid $datbeautifulcharcoal;
+}
+
+.project-description-text {
+  // text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1em;
+  height: 90%;
+  padding: 20px 0px 0px;
+}
+
+/*----------------------------------------
+>>>>>>>>  PROJECT STACK SECTION - right  <<<<<<<<
+----------------------------------------*/
+.pdb-right {
+  height: 90%;
+  width: 50%;
+  // background-color: pink;
+  padding: 20px;
+}
+
+.project-stack-title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+  height: 10%;
+  border-bottom: 1px solid $datbeautifulcharcoal;
+  width: 80%;
+}
+
+.project-stack-ul {
+  margin: 0;
+  padding: 0;
+  height: 90%;
+  padding: 20px 0px 0px;
+}
+
+.project-stack-li {
+  // background-color: purple;
+  width: 30%;
+  margin: 10px auto;
+  font-size: 1.2em;
+}
+
+/*----------------------------------------
+>>>>>>>>  PROJECT BUTTONS  <<<<<<<<
+----------------------------------------*/
+.projects-buttons-box {
+  width: 100%;
+  height: 40%;
+  background-color: green;
+}
