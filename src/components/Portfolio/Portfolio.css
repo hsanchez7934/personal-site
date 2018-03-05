@@ -1,17 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Tangerine);
-#yo {
-  height: 400px;
-  width: 100%;
-  background-color: pink; }
-
 #portfolio-container {
   height: 100%;
   width: 100%;
   font-family: "Raleway", sans-serif; }
 
 #portfolio-header {
-  height: 900px;
+  height: 700px;
   background-color: #222226;
   background-image: url(../../assets/trees.jpg);
   background-size: cover;
@@ -21,7 +16,7 @@
   background-attachment: fixed; }
 
 #portfolio-intro-box {
-  height: 85%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -8,6 +8,10 @@ import Footer from '../Footer/Footer.js';
 
 export default class Portfolio extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   createProjectCards = () => (
     projectsArray.map( (project, index) =>
     <ProjectCard
@@ -36,8 +40,8 @@ export default class Portfolio extends Component {
             </h3>
             <p id='pdb-text'>
               Below you'll find a selection of some of the work
-              that highlights my technical abilities as a front-end engineer,
-              my ability to effectively work in a collaborative
+              that highlight my technical abilities as a front-end engineer,
+              my ability to work effectively in a collaborative
               environment, and my ability to work autonomously. I devote myself
               to my projects and I enjoy every step of the build process.
             </p>

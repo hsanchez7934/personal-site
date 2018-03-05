@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
 .header-component-nav {
   font-family: "Raleway", sans-serif;
-  height: 15%;
+  height: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
@@ -9,12 +9,12 @@
 .router-nav-links {
   color: #fff;
   opacity: 0.7;
-  margin-left: 100px; }
+  margin-left: 80px; }
 
 .nav-links-li {
   display: inline-block;
   list-style: none;
-  font-size: 1.2em; }
+  font-size: 0.9em; }
 
 .out-of-focus {
   color: #8f9294;
@@ -22,7 +22,8 @@
 
 .nav-links-li:hover {
   color: #42e8f4;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.9; }
 
 .header-component-ul {
   color: #fff;

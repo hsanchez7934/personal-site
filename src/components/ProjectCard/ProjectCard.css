@@ -3,7 +3,10 @@
   width: 90%;
   height: 800px;
   margin: 100px auto;
-  display: flex; }
+  display: flex;
+  -webkit-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.75); }
 
 .project-image {
   height: 100%;
@@ -11,10 +14,7 @@
 
 .project-info-box {
   height: 100%;
-  width: 60%;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000; }
+  width: 60%; }
 
 .project-title {
   margin: 0;
@@ -53,7 +53,8 @@
   margin: 0 auto;
   font-size: 1.1em;
   height: 90%;
-  padding: 20px 0px 0px; }
+  padding: 20px 0px 0px;
+  overflow: scroll; }
 
 /*----------------------------------------
 >>>>>>>>  PROJECT STACK SECTION - right  <<<<<<<<
@@ -78,7 +79,7 @@
   padding: 20px 0px 0px; }
 
 .project-stack-li {
-  width: 30%;
+  width: 50%;
   margin: 10px auto;
   font-size: 1.2em; }
 

@@ -17,6 +17,10 @@ export default class LandingPage extends Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   iconChange = (query, icon) => {
     this.setState({
       [query]: icon
@@ -112,18 +116,23 @@ export default class LandingPage extends Component {
         </header>
 
         <main id='landingpage-main'>
-          <section id='image-container'>
-            <img
-              src={photo}
-              alt='Photograph of me in the park.'
-              id='profile-pic' />
-          </section>
+
           <section id='intro-section'>
-            <h2 id='name'>Hector A. Sanchez</h2>
-            <p id='title'>
-              Snowboarder, avid reader, dog lover,
-              music junkie, coding ninja extraordinaire
-            </p>
+
+            <div id='intro-section-left'>
+              <img
+                src={photo}
+                alt='Photograph of me in the park.'
+                id='profile-pic' />
+            </div>
+            <div id='intro-section-right'>
+              <h2 id='name'>Hector A. Sanchez</h2>
+              <p id='title'>
+                Snowboarder, avid reader, dog lover,
+                music junkie, coding ninja extraordinaire
+              </p>
+            </div>
+
           </section>
           <section id='about-me'>
 
@@ -135,8 +144,7 @@ export default class LandingPage extends Component {
               to better their lives through the use of technology.
               I love what I do and I'm excited to see how
               I can add value to your company, team, or project
-              with my technical skills, my empathetic nature towards
-              others, my ability to relate with people at
+              with my technical skills, my ability to relate with people at
               a professional level, and my keen problem solving abilities.
             </p>
           </section>

@@ -13,17 +13,17 @@
 ----------------------------------------*/
 #landing-page-nav {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
-  height: 10%;
-  opacity: 0.7;
+  height: 8%;
+  opacity: 0.9;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
 .landing-page-hero {
-  height: 900px;
+  height: 700px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -47,13 +47,13 @@ video {
 .router-nav-links {
   color: $white;
   opacity: 0.9;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .nav-links-li {
   display: inline-block;
   list-style: none;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 .out-of-focus {
@@ -69,7 +69,7 @@ video {
 .quote {
   position: absolute;
   color: $white;
-  font-size: 60px;
+  font-size: 50px;
   margin: 0;
   text-align: center;
   width: 70%;
@@ -83,9 +83,9 @@ video {
   color: $white;
   opacity: 0.9;
   margin: 0;
-  font-size: 90px;
+  font-size: 85px;
   // background-color: pink;
-  width: 70%;
+  width: 80%;
   text-align: center;
   margin-top: 80px;
 }
@@ -96,56 +96,61 @@ video {
 
 #landingpage-main {
   width: 100%;
-  height: 3450px;
-}
-
-#image-container {
-  height: 4%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $superlightgray;
+  height: 3250px;
 }
 
 #profile-pic {
-  top: 730px;
-  height: 350px;
-  width: 370px;
-  position: absolute;
+  height: 300px;
+  width: 315px;
   display: block;
-  border-radius: 60%;
-  border: 1px solid $datbeautifulcharcoal;
+  border: 2px solid $datbeautifulcharcoal;
 }
 
 #intro-section {
-  height: 9%;
+  height: 13%;
+  display: flex;
+  width: 100%;
+  background-color: $superlightgray;
+}
+
+#intro-section-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#intro-section-right {
+  width: 60%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 0px;
-  background-color: $superlightgray;
 }
 
 #name {
   margin: 0;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
+  width: 90%;
+
 }
 
 #title {
+  width: 90%;
   margin: 10px 0px 0px;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 100;
-  text-align: center;
+  text-align: left;
+  padding-right: 130px;
 }
 
 #about-me {
-  height: 12%;
-  padding: 50px 0px 10px;
+  height: 14%;
+  padding: 90px 0px 10px;
   width: 80%;
   margin: 0 auto;
 }
@@ -153,7 +158,7 @@ video {
 #about-me-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%;
 }
@@ -162,20 +167,20 @@ video {
   height: 90%;
   margin: 0;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 400;
   padding: 20px 0px 0px;
 }
 
 #skills {
-  height: 47%;
+  height: 40%;
   width: 80%;
   margin: 0 auto;
 }
 
 #skills-title {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 5%;
   margin: 0;
@@ -228,7 +233,7 @@ video {
   width: 100%;
   background-color: inherit;
   color: $black;
-  font-size: 1.2em;
+  font-size: 1em;
   border: 3px solid $black;
 }
 
@@ -240,8 +245,8 @@ video {
 }
 
 #portfolio-icon {
-  height: 23px;
-  width: 23px;
+  height: 20px;
+  width: 20px;
   position: relative;
   top: 3px;
   right: 10px;
@@ -250,7 +255,7 @@ video {
 #ltp-text {
   text-align: center;
   height: 30%;
-  font-size: 2.2em;
+  font-size: 2em;
   margin: 0;
   font-weight: 500;
 }
@@ -266,15 +271,15 @@ video {
 #education {
   width: 100%;
   margin: 0 auto;
-  height: 15%;
+  height: 20%;
   background-color: $superlightgray;
-  padding: 30px 0px;
+  padding: 70px 0px;
 }
 
 #education-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%;
 }
@@ -326,7 +331,7 @@ video {
   margin: 20px 0px 0px;
   height: 40%;
   font-size: 1.5em;
-  padding-right: 40px;
+  width: 70%;
 }
 
 #school-link-box {
@@ -338,17 +343,17 @@ video {
 }
 
 #school-url {
-  border: 3px solid $black;
+  border: 3px solid #000;
   background-color: inherit;
-  height: 55%;
+  height: 50%;
   width: 20%;
   display: block;
-  color: $black;
+  color: #000;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   padding-top: 25px;
   font-weight: 400;
-  margin: 0 auto 100px;
+  margin: 0 auto 10px;
   text-align: center;
 }
 

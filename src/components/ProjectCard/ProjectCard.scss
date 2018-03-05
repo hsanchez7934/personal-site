@@ -6,6 +6,9 @@
   height: 800px;
   margin: 100px auto;
   display: flex;
+  -webkit-box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
 }
 
 .project-image {
@@ -16,13 +19,9 @@
 .project-info-box {
   height: 100%;
   width: 60%;
-  border-top: 2px solid $black;
-  border-right: 2px solid $black;
-  border-bottom: 2px solid $black;
 }
 
 .project-title {
-  // background-color: blue;
   margin: 0;
   text-align: center;
   height: 10%;
@@ -38,6 +37,7 @@
   align-items: center;
   justify-content: center;
 }
+
 /*----------------------------------------
 >>>>>>>>  project description section -left  <<<<<<<<
 ----------------------------------------*/
@@ -65,6 +65,7 @@
   font-size: 1.1em;
   height: 90%;
   padding: 20px 0px 0px;
+  overflow: scroll;
 }
 
 /*----------------------------------------
@@ -94,8 +95,7 @@
 }
 
 .project-stack-li {
-  // background-color: purple;
-  width: 30%;
+  width: 50%;
   margin: 10px auto;
   font-size: 1.2em;
 }

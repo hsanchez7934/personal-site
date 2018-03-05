@@ -2,12 +2,6 @@
 @import "../../styles/colors.scss";
 @import "../../styles/tangerinefont.scss";
 
-#yo {
-  height: 400px;
-  width: 100%;
-  background-color: pink;
-}
-
 #portfolio-container {
   height: 100%;
   width: 100%;
@@ -15,7 +9,7 @@
 }
 
 #portfolio-header {
-  height: 900px;
+  height: 700px;
   background-color: $datbeautifulcharcoal;
   background-image: url(../../assets/trees.jpg);
   background-size: cover;
@@ -26,7 +20,7 @@
 }
 
 #portfolio-intro-box {
-  height: 85%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
