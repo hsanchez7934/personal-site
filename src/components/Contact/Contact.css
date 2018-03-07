@@ -1,0 +1,294 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+#contact {
+  width: 100%;
+  height: 100%;
+  font-family: "Raleway", sans-serif; }
+
+#contact-header {
+  height: 700px;
+  width: 100%;
+  background-image: url(../../assets/cat.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+#contact-quote-container {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.contact-quote-text {
+  opacity: 0.9;
+  margin: 0;
+  font-family: "Tangerine", cursive;
+  color: #fff;
+  font-size: 60px; }
+
+#contact-quote {
+  opacity: 0.9;
+  margin: 0px 0px 60px;
+  color: #fff;
+  font-size: 90px;
+  font-weight: lighter;
+  opacity: 0.9; }
+
+#contact-main {
+  width: 100%;
+  height: 1000px; }
+
+#contact-main-intro {
+  width: 100%;
+  height: 30%;
+  background-color: #EDEEEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+#contact-main-intro-title {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  height: 20%;
+  font-weight: 500;
+  font-size: 2em;
+  padding: 0; }
+
+#contact-main-intro-text {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  height: 30%;
+  font-size: 1.5em; }
+
+#contact-main-form-container {
+  width: 100%;
+  height: 70%;
+  background-image: url(../../assets/cove.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; }
+
+#form-container-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#form-container-right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#form-container-left-wrapper {
+  height: 90%;
+  width: 90%;
+  padding: 50px; }
+
+.contact-info-boxes {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.contact-icon-containers {
+  height: 30%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.contact-info-text-container {
+  height: 30%;
+  width: 80%;
+  box-shadow: inset 1px 0 0 #fff;
+  display: flex;
+  align-items: center; }
+
+.contact-info-text {
+  color: #fff;
+  margin: 0 auto;
+  width: 93%;
+  font-size: 1em; }
+
+.contact-icons {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px; }
+
+#form-wrapper {
+  height: 85%;
+  width: 85%;
+  -webkit-box-shadow: 0px 0px 31px 1px #ddd3d5;
+  -moz-box-shadow: 0px 0px 31px 1px #ddd3d5;
+  box-shadow: 0px 0px 31px 1px #ddd3d5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#form-box {
+  height: 90%;
+  width: 75%;
+  padding-left: 30px; }
+
+#form-heading {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 1.6em;
+  color: #fff; }
+
+#full-name {
+  width: 100%;
+  height: 5%;
+  font-size: 0.9em;
+  color: #fff;
+  padding-top: 15px; }
+
+#name-inputs-box {
+  width: 100%;
+  height: 15%; }
+
+fieldset {
+  display: none; }
+
+legend {
+  display: none; }
+
+#first-last-name-input-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.input-wrappers {
+  width: 50%;
+  height: 60%; }
+
+label {
+  font-size: 0.5em;
+  display: block;
+  width: 80%;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 0.8em; }
+
+.name-inputs {
+  width: 90%;
+  height: 65%;
+  display: block;
+  font-size: 15px;
+  padding-left: 10px;
+  opacity: 0.9; }
+
+#email-input-box {
+  width: 100%;
+  height: 15%;
+  padding-top: 5px; }
+
+#email-input-title {
+  width: 90%;
+  height: 35%;
+  color: #fff;
+  font-size: 0.9em; }
+
+#email-input-tag {
+  width: 95%;
+  display: block;
+  height: 38%;
+  padding-left: 10px;
+  font-size: 15px;
+  opacity: 0.9; }
+
+#message-textarea-box {
+  width: 100%;
+  height: 30%; }
+
+#message-textarea-box-title {
+  width: 100%;
+  height: 10%;
+  font-size: 0.9em;
+  color: #fff; }
+
+#message-textarea {
+  height: 90%;
+  width: 100%;
+  padding-top: 10px; }
+
+textarea {
+  width: 95%;
+  height: 130px;
+  display: block;
+  opacity: 0.9;
+  resize: none; }
+
+#submit-button-container {
+  width: 95%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#submit-button {
+  width: 35%;
+  height: 30%;
+  background-color: inherit;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 0.9em; }
+
+#submit-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  opacity: 0.9;
+  color: #000; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }

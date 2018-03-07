@@ -1,5 +1,6 @@
 @import "../../styles/ralewayfont.scss";
 @import "../../styles/colors.scss";
+@import "../../styles/tangerinefont.scss";
 
 .landing-page-container {
   height: 100%;
@@ -7,12 +8,15 @@
   font-family: $raleway;
 }
 
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - BEGIN  <<<<<<<<
+----------------------------------------*/
 #landing-page-nav {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
-  height: 10%;
-  opacity: 0.7;
+  height: 8%;
+  opacity: 0.9;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -24,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
   background-color: #222226;
 }
 
@@ -32,30 +35,29 @@ video {
   min-width: 100%;
   min-height: 100%;
   object-fit: fill;
-  // position: absolute;
   height: 100%;
   width: 100%;
 }
 
 #nav-links {
-  color: #fff;
+  color: $white;
   padding-right: 100px;
 }
 
 .router-nav-links {
   color: $white;
   opacity: 0.9;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .nav-links-li {
   display: inline-block;
   list-style: none;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 .out-of-focus {
-  color: #8f9294;
+  color: $outoffocus;
   transition-duration: 0.4s;
 }
 
@@ -64,73 +66,91 @@ video {
   cursor: pointer;
 }
 
-#quote {
+.quote {
   position: absolute;
-  color: #fff;
+  color: $white;
   font-size: 50px;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
   text-align: center;
   width: 70%;
   font-weight: lighter;
-  // background-color: pink;
+  font-family: $tangerine;
 }
 
-main {
+#landing-page-title {
+  font-weight: lighter;
+  position: absolute;
+  color: $white;
+  opacity: 0.9;
+  margin: 0;
+  font-size: 85px;
+  // background-color: pink;
+  width: 80%;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - END  <<<<<<<<
+----------------------------------------*/
+
+#landingpage-main {
   width: 100%;
-  height: 3500px;
-  // height: 60vh;
-  // background-color: pink;
-}
-
-#image-container {
-  height: 5%;
-  // background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 3250px;
 }
 
 #profile-pic {
-  top: 510px;
-  height: 350px;
-  width: 370px;
-  position: absolute;
+  height: 300px;
+  width: 315px;
   display: block;
-  border-radius: 60%;
-  border: 1px solid #222226;
+  border: 2px solid $datbeautifulcharcoal;
 }
 
 #intro-section {
-  // background-color: green;
-  height: 5%;
+  height: 13%;
+  display: flex;
+  width: 100%;
+  background-color: $superlightgray;
+}
+
+#intro-section-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#intro-section-right {
+  width: 60%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
-  border-bottom: 1px solid $black;
-  padding-bottom: 0px;
 }
 
 #name {
-  margin: 0px 0px 0px;
-  font-size: 3em;
+  margin: 0;
+  font-size: 2em;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
+  width: 90%;
+
 }
 
 #title {
-  margin: 10px 0px 0px 0px;
-  font-size: 2em;
+  width: 90%;
+  margin: 10px 0px 0px;
+  font-size: 1.5em;
   font-weight: 100;
-  text-align: center;
+  text-align: left;
+  padding-right: 130px;
 }
 
 #about-me {
-  height: 12%;
-  // background-color: orange;
-  padding: 50px 0px 10px;
+  height: 14%;
+  padding: 90px 0px 10px;
   width: 80%;
   margin: 0 auto;
 }
@@ -138,42 +158,35 @@ main {
 #about-me-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%;
 }
 
 #titles-text1 {
-  // background-color: pink;
-  // width: 60%;
   height: 90%;
   margin: 0;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 400;
   padding: 20px 0px 0px;
 }
 
 #skills {
-  // background-color: magenta;
-  height: 50%;
+  height: 40%;
   width: 80%;
   margin: 0 auto;
 }
 
 #skills-title {
-  // width: 50%;
-  // margin: 0 auto;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 5%;
   margin: 0;
-  // background-color: yellow;
 }
 
 #skills-box {
-  // background-color: pink;
   width: 100%;
   height: 95%;
   display: flex;
@@ -187,7 +200,6 @@ main {
   height: 15%;
   width: 15%;
   margin: 0px 25px;
-  // background-color: blue;
 }
 
 .logo-container {
@@ -207,7 +219,6 @@ main {
 #link-to-portfolio {
   width: 100%;
   height: 13%;
-  // background-color: red;
 }
 
 #portfolio-button-link {
@@ -222,21 +233,20 @@ main {
   width: 100%;
   background-color: inherit;
   color: $black;
-  font-size: 1.2em;
+  font-size: 1em;
   border: 3px solid $black;
 }
 
 #ltp-button:hover {
   cursor: pointer;
-  background-color: #222226;
-  // transition-duration: 0.3s;
+  background-color: $datbeautifulcharcoal;
   color: $white;
   border: 0;
 }
 
 #portfolio-icon {
-  height: 23px;
-  width: 23px;
+  height: 20px;
+  width: 20px;
   position: relative;
   top: 3px;
   right: 10px;
@@ -245,8 +255,7 @@ main {
 #ltp-text {
   text-align: center;
   height: 30%;
-  font-size: 2.2em;
-  // background-color: pink;
+  font-size: 2em;
   margin: 0;
   font-weight: 500;
 }
@@ -262,41 +271,36 @@ main {
 #education {
   width: 100%;
   margin: 0 auto;
-  height: 15%;
-  background-color: #EDEEEF;
-  padding: 30px 0px 30px;
+  height: 20%;
+  background-color: $superlightgray;
+  padding: 70px 0px;
 }
 
 #education-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%;
-  // background-color: yellow;
 }
 
 #school-info-box {
-  // background-color: red;
   width: 100%;
   height: 60%;
   display: flex;
 }
 
 #school-info-box-left {
-  // background-color: green;
   width: 50%;
   height: 100%;
 }
 
 #school-info-box-right {
-  // background-color: blue;
   width: 50%;
   height: 100%;
 }
 
 #school-title {
-  // background-color: orange;
   margin: 40px 0px 0px;
   height: 5%;
   font-size: 1.5em;
@@ -307,7 +311,6 @@ main {
 }
 
 #school-date {
-  // background-color: pink;
   margin: 15px 0px 0px;
   height: 5%;
   font-size: 1.2em;
@@ -317,7 +320,6 @@ main {
 }
 
 #achieved {
-  // background-color: pink;
   margin: 40px 0px 0px;
   height: 5%;
   font-size: 1.5em;
@@ -326,35 +328,32 @@ main {
 }
 
 #achieved-text {
-  // background-color: pink;
   margin: 20px 0px 0px;
   height: 40%;
   font-size: 1.5em;
-  // font-weight: 400;
-  padding-right: 40px;
+  width: 70%;
 }
 
 #school-link-box {
   width: 100%;
   height: 30%;
-  // background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #school-url {
-  border: 3px solid $black;
+  border: 3px solid #000;
   background-color: inherit;
-  height: 55%;
+  height: 50%;
   width: 20%;
   display: block;
-  color: $black;
+  color: #000;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   padding-top: 25px;
   font-weight: 400;
-  margin: 0 auto 100px;
+  margin: 0 auto 10px;
   text-align: center;
 }
 
@@ -363,130 +362,28 @@ main {
   background-color: #222226;
 }
 
-// FOOTER STUFF
 
-#landing-page-footer {
-  width: 100%;
-  height: 400px;
-  background-color: #222226;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
 }
 
-#footer-links {
-  // background-color: orange;
-  margin: 0px 0px 50px 0px;
-}
-
-.footer-links-li {
-  color: #fff;
-  list-style: none;
-  display: inline-block;
-  font-size: 1.2em;
-}
-
-.footer-links-li:hover {
-  color: $datblue;
-  text-decoration: underline;
-}
-
-.router-footer-nav-links {
-  margin-left: 70px;
-  margin-right: 70px;
-}
-
-#footer-social-media {
-  // background-color: pink;
-  height: 50px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-media-icons {
-  height: 50px;
-  width: 50px;
-  margin: 0px 90px;
-}
-
-.social-media-icons:hover {
-  cursor: pointer;
-}
-
-.swing:hover
-{
-  -webkit-animation: swing 1s ease;
-  animation: swing 1s ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-@-webkit-keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-       transform: translateX(-5px);
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }

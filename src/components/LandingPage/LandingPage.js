@@ -4,23 +4,21 @@ import video from '../../assets/denverhero.mp4';
 import photo from '../../assets/photo1.jpg';
 import portfolioIcon from '../../assets/briefcase.svg';
 import portfolioIconBlack from '../../assets/briefcase-black.svg';
-import linkedinIcon from '../../assets/linkedin-icon.svg';
-import linkedinIconHover from '../../assets/linkedin-icon-hover.svg';
-import githubIcon from '../../assets/github-icon.svg';
-import githubIconHover from '../../assets/github-icon-hover.svg';
 import techStackArray from '../../techStack.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer.js';
 
 export default class LandingPage extends Component {
   constructor() {
     super();
     this.state = {
-      linkedin: linkedinIcon,
-      github: githubIcon,
       liClass: 'nav-links-li',
       briefcase: portfolioIconBlack
     };
+  }
+
+  componentDidMount() {
+    window.scrollTo(0,0);
   }
 
   iconChange = (query, icon) => {
@@ -108,22 +106,33 @@ export default class LandingPage extends Component {
               src={video}
               type='video/mp4' />
           </video>
-          <h2 id='quote'>
-            The desire to create is one of the
-            deepest yearnings of the human soul
+          <p className='quote fade-in one'>
+            the desire to create is one of the
+            deepest yearnings of the human soul...
+          </p>
+          <h2 id='landing-page-title'>
+            FRONT-END DEVELOPER
           </h2>
         </header>
 
-        <main>
-          <section id='image-container'>
-            <img
-              src={photo}
-              alt='Photograph of me in the park.'
-              id='profile-pic' />
-          </section>
+        <main id='landingpage-main'>
+
           <section id='intro-section'>
-            <h2 id='name'>Hector A. Sanchez</h2>
-            <h3 id='title'>Front-End Developer</h3>
+
+            <div id='intro-section-left'>
+              <img
+                src={photo}
+                alt='Photograph of me in the park.'
+                id='profile-pic' />
+            </div>
+            <div id='intro-section-right'>
+              <h2 id='name'>Hector A. Sanchez</h2>
+              <p id='title'>
+                Snowboarder, avid reader, dog lover,
+                music junkie, coding ninja extraordinaire
+              </p>
+            </div>
+
           </section>
           <section id='about-me'>
 
@@ -135,8 +144,7 @@ export default class LandingPage extends Component {
               to better their lives through the use of technology.
               I love what I do and I'm excited to see how
               I can add value to your company, team, or project
-              with my technical skills, my empathetic nature towards
-              others, my ability to relate with people at
+              with my technical skills, my ability to relate with people at
               a professional level, and my keen problem solving abilities.
             </p>
           </section>
@@ -151,7 +159,7 @@ export default class LandingPage extends Component {
           </section>
           <section id='link-to-portfolio'>
             <p id='ltp-text'>
-              View my portfolio to review my recent work
+              View my work as a Front-End developer
             </p>
             <div id='ltp-button-box'>
               <Link
@@ -202,50 +210,8 @@ export default class LandingPage extends Component {
                 </a>
             </div>
           </section>
-
         </main>
-        <footer id='landing-page-footer'>
-          <ul id='footer-links'>
-            <Link
-              to={'/'}
-              className='router-footer-nav-links'>
-                  <li className='footer-links-li'>
-                    HOME
-                  </li>
-            </Link>
-            <Link
-              to={'/portfolio'}
-              className='router-footer-nav-links'>
-              <li className='footer-links-li'>
-                PORTFOLIO
-              </li>
-            </Link>
-            <Link
-              to={'/contact'}
-              className='router-footer-nav-links'>
-              <li className='footer-links-li'>
-                CONTACT
-              </li>
-            </Link>
-          </ul>
-          <div id='footer-social-media'>
-            <a
-              href='https://www.linkedin.com/in/hector-a-sanchez/'
-              style={this.backgroundImage(linkedin)}
-              alt='LinkedIn icon.'
-              className='social-media-icons swing'
-              onMouseEnter={() => this.iconChange('linkedin', linkedinIconHover)}
-              onMouseLeave={() => this.iconChange('linkedin', linkedinIcon)}>
-            </a>
-            <a
-              href='https://github.com/hsanchez7934'
-              style={this.backgroundImage(github)}
-              className='social-media-icons swing'
-              onMouseEnter={() => this.iconChange('github', githubIconHover)}
-              onMouseLeave={() => this.iconChange('github', githubIcon)}>
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }

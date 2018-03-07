@@ -1,15 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
 .landing-page-container {
   height: 100%;
   width: 100%;
   font-family: "Raleway", sans-serif; }
 
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - BEGIN  <<<<<<<<
+----------------------------------------*/
 #landing-page-nav {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
-  height: 10%;
-  opacity: 0.7;
+  height: 8%;
+  opacity: 0.9;
   display: flex;
   align-items: center;
   justify-content: flex-end; }
@@ -36,12 +40,12 @@ video {
 .router-nav-links {
   color: #fff;
   opacity: 0.9;
-  margin-left: 100px; }
+  margin-left: 80px; }
 
 .nav-links-li {
   display: inline-block;
   list-style: none;
-  font-size: 1.2em; }
+  font-size: 0.9em; }
 
 .out-of-focus {
   color: #8f9294;
@@ -51,67 +55,86 @@ video {
   color: #42e8f4;
   cursor: pointer; }
 
-#quote {
+.quote {
   position: absolute;
   color: #fff;
   font-size: 50px;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
   text-align: center;
   width: 70%;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-family: "Tangerine", cursive; }
 
-main {
+#landing-page-title {
+  font-weight: lighter;
+  position: absolute;
+  color: #fff;
+  opacity: 0.9;
+  margin: 0;
+  font-size: 85px;
+  width: 80%;
+  text-align: center;
+  margin-top: 80px; }
+
+/*----------------------------------------
+>>>>>>>>  NAV & HEADER - END  <<<<<<<<
+----------------------------------------*/
+#landingpage-main {
   width: 100%;
-  height: 3500px; }
-
-#image-container {
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  height: 3250px; }
 
 #profile-pic {
-  top: 510px;
-  height: 350px;
-  width: 370px;
-  position: absolute;
+  height: 300px;
+  width: 315px;
   display: block;
-  border-radius: 60%;
-  border: 1px solid #222226; }
+  border: 2px solid #222226; }
 
 #intro-section {
-  height: 5%;
+  height: 13%;
+  display: flex;
+  width: 100%;
+  background-color: #EDEEEF; }
+
+#intro-section-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+#intro-section-right {
+  width: 60%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
-  border-bottom: 1px solid #000;
-  padding-bottom: 0px; }
+  flex-direction: column; }
 
 #name {
-  margin: 0px 0px 0px;
-  font-size: 3em;
+  margin: 0;
+  font-size: 2em;
   font-weight: 500;
-  text-align: center; }
+  text-align: left;
+  width: 90%; }
 
 #title {
-  margin: 10px 0px 0px 0px;
-  font-size: 2em;
+  width: 90%;
+  margin: 10px 0px 0px;
+  font-size: 1.5em;
   font-weight: 100;
-  text-align: center; }
+  text-align: left;
+  padding-right: 130px; }
 
 #about-me {
-  height: 12%;
-  padding: 50px 0px 10px;
+  height: 14%;
+  padding: 90px 0px 10px;
   width: 80%;
   margin: 0 auto; }
 
 #about-me-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%; }
 
@@ -119,18 +142,18 @@ main {
   height: 90%;
   margin: 0;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 400;
   padding: 20px 0px 0px; }
 
 #skills {
-  height: 50%;
+  height: 40%;
   width: 80%;
   margin: 0 auto; }
 
 #skills-title {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 5%;
   margin: 0; }
@@ -176,7 +199,7 @@ main {
   width: 100%;
   background-color: inherit;
   color: #000;
-  font-size: 1.2em;
+  font-size: 1em;
   border: 3px solid #000; }
 
 #ltp-button:hover {
@@ -186,8 +209,8 @@ main {
   border: 0; }
 
 #portfolio-icon {
-  height: 23px;
-  width: 23px;
+  height: 20px;
+  width: 20px;
   position: relative;
   top: 3px;
   right: 10px; }
@@ -195,7 +218,7 @@ main {
 #ltp-text {
   text-align: center;
   height: 30%;
-  font-size: 2.2em;
+  font-size: 2em;
   margin: 0;
   font-weight: 500; }
 
@@ -209,14 +232,14 @@ main {
 #education {
   width: 100%;
   margin: 0 auto;
-  height: 15%;
+  height: 20%;
   background-color: #EDEEEF;
-  padding: 30px 0px 30px; }
+  padding: 70px 0px; }
 
 #education-title {
   margin: 0;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
   height: 10%; }
 
@@ -261,7 +284,7 @@ main {
   margin: 20px 0px 0px;
   height: 40%;
   font-size: 1.5em;
-  padding-right: 40px; }
+  width: 70%; }
 
 #school-link-box {
   width: 100%;
@@ -273,104 +296,55 @@ main {
 #school-url {
   border: 3px solid #000;
   background-color: inherit;
-  height: 55%;
+  height: 50%;
   width: 20%;
   display: block;
   color: #000;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   padding-top: 25px;
   font-weight: 400;
-  margin: 0 auto 100px;
+  margin: 0 auto 10px;
   text-align: center; }
 
 #school-url:hover {
   color: #fff;
   background-color: #222226; }
 
-#landing-page-footer {
-  width: 100%;
-  height: 400px;
-  background-color: #222226;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-#footer-links {
-  margin: 0px 0px 50px 0px; }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-.footer-links-li {
-  color: #fff;
-  list-style: none;
-  display: inline-block;
-  font-size: 1.2em; }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-.footer-links-li:hover {
-  color: #42e8f4;
-  text-decoration: underline; }
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
 
-.router-footer-nav-links {
-  margin-left: 70px;
-  margin-right: 70px; }
-
-#footer-social-media {
-  height: 50px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.social-media-icons {
-  height: 50px;
-  width: 50px;
-  margin: 0px 90px; }
-
-.social-media-icons:hover {
-  cursor: pointer; }
-
-.swing:hover {
-  -webkit-animation: swing 1s ease;
-  animation: swing 1s ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
-
-@-webkit-keyframes swing {
-  15% {
-    -webkit-transform: translateX(5px);
-    transform: translateX(5px); }
-  30% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px); }
-  50% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px); }
-  65% {
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px); }
-  80% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px); }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
-
-@keyframes swing {
-  15% {
-    -webkit-transform: translateX(5px);
-    transform: translateX(5px); }
-  30% {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px); }
-  50% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px); }
-  65% {
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px); }
-  80% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px); }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
