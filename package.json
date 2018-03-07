@@ -2,7 +2,11 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/contact": {
+      "target": "http://localhost:3001"
+    }
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",

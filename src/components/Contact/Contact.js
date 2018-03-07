@@ -8,9 +8,64 @@ import linkedInColor from '../../assets/linkedin-color.svg';
 import slack from '../../assets/slack.svg';
 
 export default class Contact extends Component {
+  constructor() {
+    super();
+    this.state = {
+      first: '',
+      last: '',
+      email: '',
+      message: ''
+    }
+  }
 
   componentDidMount() {
     window.scrollTo(0,0);
+  }
+
+  checkForSpecialChars = (string1) => {
+    const specialChars = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
+    for (let i = 0; i < specialChars.length; i++) {
+      if (string1.indexOf(specialChars[i]) > -1) {
+        alert('No special characters allowed');
+        return true;
+      }
+      return false;
+    }
+  };
+
+  validateEmail = (inputText) => {
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailFormat)) {
+      return true;
+    } else {
+      alert('You have entered an invalid email address');
+      document.contact.email.focus();
+      return false;
+    }
+  }
+
+  sendEmail = (event, first, last, email, message) => {
+    // const firstName = this.checkForSpecialChars(first);
+    // const lastName = this.checkForSpecialChars(last);
+    // const emailVerify = this.validateEmail(email);
+    event.preventDefault();
+    const messageToSend = {
+      first,
+      last,
+      email,
+      message
+    };
+
+    fetch(`/contact`, {
+      method: 'POST',
+      accept: 'application/json',
+      headers: {
+        Authorization: `AIzaSyAK8jzjqJP8N70BwkfBtawj0lYONXTJY6g`
+      },
+      body: messageToSend
+    })
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
   }
 
   backgroundImage = (url) => ({
@@ -20,7 +75,16 @@ export default class Contact extends Component {
     backgroundPosition: 'center'
   })
 
+  updateOnChange = event => {
+    const key = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [key]: value
+    });
+  }
+
   render() {
+    const { first, last, email, message } = this.state;
     return (
       <section id='contact'>
         <header id='contact-header'>
@@ -83,7 +147,7 @@ export default class Contact extends Component {
             </div>
 
             <div id='form-container-right'>
-              <form id='form-wrapper' method='POST' action='/contact'>
+              <form id='form-wrapper' method='POST' action='/contact' name='contact'>
                 {/* <div id='form-wrapper'> */}
                   <div id='form-box'>
                     <div id='form-heading'>
@@ -100,13 +164,20 @@ export default class Contact extends Component {
                         <div className='input-wrappers'>
                           <input
                             type='text'
-                            className='name-inputs' />
+                            className='name-inputs'
+                            value={first}
+                            name='first'
+                            required
+                            onChange={(event) => this.updateOnChange(event)} />
                             <label>First Name</label>
                         </div>
                         <div className='input-wrappers'>
                           <input
                             type='text'
-                            className='name-inputs' />
+                            className='name-inputs'
+                            name='last'
+                            required
+                            onChange={(event) => this.updateOnChange(event)} />
                             <label>Last Name</label>
                         </div>
                       </div>
@@ -115,21 +186,30 @@ export default class Contact extends Component {
                       <div id='email-input-title'>EMAIL ADDRESS*</div>
                       <input
                         type='email'
-                        id='email-input-tag'></input>
+                        id='email-input-tag'
+                        name='email'
+                        required
+                        onChange={(event) => this.updateOnChange(event)} />
+
                     </div>
                     <div id='message-textarea-box'>
                       <div id='message-textarea-box-title'>
                         YOUR MESSAGE*
                       </div>
                       <div id='message-textarea'>
-                        <textarea></textarea>
+                        <textarea
+                          name='message'
+                          required
+                          onChange={(event) => this.updateOnChange(event)}>
+                          </textarea>
                       </div>
                     </div>
                     <div id='submit-button-container'>
                       <input
                         type='submit'
                         value='SUBMIT'
-                        id='submit-button'/>
+                        id='submit-button'
+                        onClick={(event) => this.sendEmail(event, first, last, email, message)} />
                     </div>
                   </div>
                 {/* </div> */}

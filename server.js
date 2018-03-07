@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const transporterConfig = require('./transporterConfig.js');
+require('dotenv').config();
 
-import sendMail from 'nodemailer.js';
-
-app.use(bodyParser.urlencoded();)
+app.use(bodyParser.urlencoded({ extended: true}))
 
 const requireHTTPS = (request, response, next) => {
   if (request.header('x-forwarded-proto') !== 'https') {
@@ -18,6 +19,27 @@ app.set('port', process.env.PORT || 3001);
 app.use(express.static(path.resolve(__dirname, './public')));
 app.locals.title = 'My Site';
 
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    type: 'OAuth2',
+    ...transporterConfig
+  }
+});
+
+const sendMail = message => {
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(message, (error, info) => {
+      console.log(error, info);
+      if(error) {
+        reject(error)
+        return
+      }
+      resolve(info)
+    });
+  })
+}
+
 app.get('/', function(request, response) {
   response.sendFile(
     path.resolve(__dirname, './public', 'index.html')
@@ -26,12 +48,12 @@ app.get('/', function(request, response) {
 
 app.post('/contact', async (request, response) => {
   try {
-    const { first, last, email, message } = req.body;
-    const email = {
+    const { first, last, email, message } = request.body;
+    const emailToSend = {
       from: `${first}, ${last}, <${email}>`,
       text: message
     }
-    await sendMail(email)
+    await sendMail(emailToSend)
     console.log('success');
   } catch (error) {
     console.log('did not send');
