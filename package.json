@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/contact": {
-      "target": "http://localhost:3001"
+    "/api/v1/sender": {
+      "target": "http://localhost:5000/"
     }
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
-    "express": "^4.16.2",
+    "express": "^4.16.2",    
     "node-sass-chokidar": "0.0.3",
     "nodemailer": "^4.6.0",
     "npm-run-all": "^4.1.2",
@@ -24,11 +25,12 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js server",
+    "start-front-end": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "concurrently \"npm run start-front-end\" \"npm run server\""
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",

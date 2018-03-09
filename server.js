@@ -7,6 +7,7 @@ const transporterConfig = require('./transporterConfig.js');
 require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true}))
+app.use(bodyParser.json());
 
 const requireHTTPS = (request, response, next) => {
   if (request.header('x-forwarded-proto') !== 'https') {
@@ -15,49 +16,50 @@ const requireHTTPS = (request, response, next) => {
   return next();
 };
 
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 5000);
+
 app.use(express.static(path.resolve(__dirname, './public')));
-app.locals.title = 'My Site';
+app.locals.title = 'Hector A. Sanchez';
 
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
-  auth: {
-    type: 'OAuth2',
-    ...transporterConfig
-  }
+  service: `${process.env.SERVICE}`,
+  auth: transporterConfig
 });
 
-const sendMail = message => {
+const send = (mail) => {
   return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) => {
-      console.log(error, info);
-      if(error) {
-        reject(error)
-        return
+    transporter.sendMail(mail, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
       }
-      resolve(info)
     });
   })
 }
 
-app.get('/', function(request, response) {
+app.get('*', function(request, response) {
   response.sendFile(
     path.resolve(__dirname, './public', 'index.html')
   );
 });
 
-app.post('/contact', async (request, response) => {
-  try {
-    const { first, last, email, message } = request.body;
-    const emailToSend = {
-      from: `${first}, ${last}, <${email}>`,
-      text: message
+app.post('/api/v1/sender', (request, response) => {
+  console.log(request.body);
+  const { email, first, last, message } = request.body;
+  for(let requiredParam of ['first', 'last', 'email', 'message']) {
+    if(!request.body[requiredParam]) {
+      return response.status(422).json({ error: `Missing ${requiredParam}`});
     }
-    await sendMail(emailToSend)
-    console.log('success');
-  } catch (error) {
-    console.log('did not send');
   }
+  const mailToSend = {
+    to: `${process.env.EMAIL}`,
+    subject: `Personal Website Message From: ${first}, ${last}, @ ${email}`,
+    text: `${message}`
+  }
+  send(mailToSend)
+  .then(() => console.log('success'))
+  .catch(error => console.log('error: could not send email'))
 });
 
 app.listen(app.get('port'), () => {

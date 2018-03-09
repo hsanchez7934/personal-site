@@ -22,52 +22,6 @@ export default class Contact extends Component {
     window.scrollTo(0,0);
   }
 
-  checkForSpecialChars = (string1) => {
-    const specialChars = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
-    for (let i = 0; i < specialChars.length; i++) {
-      if (string1.indexOf(specialChars[i]) > -1) {
-        alert('No special characters allowed');
-        return true;
-      }
-      return false;
-    }
-  };
-
-  validateEmail = (inputText) => {
-    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (inputText.value.match(mailFormat)) {
-      return true;
-    } else {
-      alert('You have entered an invalid email address');
-      document.contact.email.focus();
-      return false;
-    }
-  }
-
-  sendEmail = (event, first, last, email, message) => {
-    // const firstName = this.checkForSpecialChars(first);
-    // const lastName = this.checkForSpecialChars(last);
-    // const emailVerify = this.validateEmail(email);
-    event.preventDefault();
-    const messageToSend = {
-      first,
-      last,
-      email,
-      message
-    };
-
-    fetch(`/contact`, {
-      method: 'POST',
-      accept: 'application/json',
-      headers: {
-        Authorization: `AIzaSyAK8jzjqJP8N70BwkfBtawj0lYONXTJY6g`
-      },
-      body: messageToSend
-    })
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
-  }
-
   backgroundImage = (url) => ({
     backgroundImage: 'url(' + url + ')',
     backgroundSize: 'contain',
@@ -81,6 +35,54 @@ export default class Contact extends Component {
     this.setState({
       [key]: value
     });
+  }
+
+  resetForm = () => {
+    setTimeout(() => {
+      this.setState({
+        first: '',
+        last: '',
+        email: '',
+        message: ''
+      });
+    });
+  }
+
+  sendEmail = (first, last, email, message) => {
+    const params = [first, last, email, message];
+
+    for(let i = 0; i < params.length; i++) {
+      if(params[i] === '') {
+        alert(`Please fill out entire form.`);
+        return;
+      }
+    }
+
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(email.match(mailformat)) {
+        console.log('good email');
+    } else {
+        alert("You have entered an invalid email address!");
+        return;
+    }
+
+    let messageToSend = {
+      first,
+      last,
+      email,
+      message
+    };
+
+    fetch(`/api/v1/sender`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(messageToSend)
+    })
+    .then(() => console.log('success'))
+    .catch(() => console.log('da fuck'));
+    this.resetForm();
   }
 
   render() {
@@ -147,8 +149,10 @@ export default class Contact extends Component {
             </div>
 
             <div id='form-container-right'>
-              <form id='form-wrapper' method='POST' action='/contact' name='contact'>
-                {/* <div id='form-wrapper'> */}
+              <form
+                id='form-wrapper'
+                name='sender'>
+
                   <div id='form-box'>
                     <div id='form-heading'>
                       SEND ME A MESSAGE
@@ -177,6 +181,7 @@ export default class Contact extends Component {
                             className='name-inputs'
                             name='last'
                             required
+                            value={last}
                             onChange={(event) => this.updateOnChange(event)} />
                             <label>Last Name</label>
                         </div>
@@ -188,6 +193,7 @@ export default class Contact extends Component {
                         type='email'
                         id='email-input-tag'
                         name='email'
+                        value={email}
                         required
                         onChange={(event) => this.updateOnChange(event)} />
 
@@ -200,6 +206,7 @@ export default class Contact extends Component {
                         <textarea
                           name='message'
                           required
+                          value={message}
                           onChange={(event) => this.updateOnChange(event)}>
                           </textarea>
                       </div>
@@ -209,10 +216,13 @@ export default class Contact extends Component {
                         type='submit'
                         value='SUBMIT'
                         id='submit-button'
-                        onClick={(event) => this.sendEmail(event, first, last, email, message)} />
+                        onClick={(e) =>{
+                          e.preventDefault();
+                          this.sendEmail(first, last, email, message);
+                        }} />
                     </div>
                   </div>
-                {/* </div> */}
+
               </form>
             </div>
           </section>
