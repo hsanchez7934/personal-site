@@ -37,7 +37,7 @@
 
 #contact-quote {
   opacity: 0.9;
-  margin: 0px 0px 60px;
+  margin: 0;
   color: $white;
   font-size: 90px;
   font-weight: lighter;
@@ -80,7 +80,7 @@
 #contact-main-form-container {
   width: 100%;
   height: 70%;
-  background-image: url(../../assets/cove.jpg);
+  background-image: url(../../assets/cat.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -260,7 +260,6 @@ label {
 
 #message-textarea-box {
   width: 100%;
-  // background-color: green;
   height: 30%;
 }
 
@@ -280,10 +279,11 @@ label {
 textarea {
   width: 95%;
   height: 130px;
-  // background-color: purple;
+  padding: 10px 0px 0px 10px;
   display: block;
   opacity: 0.9;
   resize: none;
+  font-size: 15px;
 }
 
 #submit-button-container {
