@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const transporterConfig = require('./transporterConfig.js');
 require('dotenv').config();
+const environment = process.env.NODE_ENV || 'development';
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(bodyParser.json());
