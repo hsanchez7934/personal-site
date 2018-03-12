@@ -1,4 +1,3 @@
-const clientID = require('./client_id.json');
 require('dotenv').config();
 
 const type = process.env.SERVICE;
