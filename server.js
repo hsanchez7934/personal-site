@@ -44,8 +44,7 @@ app.get('*', function(request, response) {
   );
 });
 
-app.post('/api/v1/sender', (request, response) => {
-  console.log(request.body);
+app.post('/api/v1/sender', (request, response) => {  
   const { email, first, last, message } = request.body;
   for(let requiredParam of ['first', 'last', 'email', 'message']) {
     if(!request.body[requiredParam]) {

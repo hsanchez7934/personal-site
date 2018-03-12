@@ -38,14 +38,12 @@ export default class Contact extends Component {
   }
 
   resetForm = () => {
-    setTimeout(() => {
       this.setState({
         first: '',
         last: '',
         email: '',
         message: ''
       });
-    });
   }
 
   sendEmail = (first, last, email, message) => {

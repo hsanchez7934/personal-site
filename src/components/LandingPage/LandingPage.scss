@@ -15,7 +15,7 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 8%;
+  height: 80px;
   opacity: 0.9;
   display: flex;
   align-items: center;
@@ -69,10 +69,10 @@ video {
 .quote {
   position: absolute;
   color: $white;
-  font-size: 50px;
+  font-size: 60px;
   margin: 0;
   text-align: center;
-  width: 70%;
+  width: 80%;
   font-weight: lighter;
   font-family: $tangerine;
 }

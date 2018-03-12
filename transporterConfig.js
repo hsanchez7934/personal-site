@@ -1,7 +1,7 @@
 const clientID = require('./client_id.json');
 require('dotenv').config();
 
-const type = 'Gmail';
+const type = process.env.SERVICE;
 const user = process.env.GMAIL_USER;
 const pass = process.env.GMAIL_PASS;
 
