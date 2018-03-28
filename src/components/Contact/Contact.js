@@ -75,10 +75,10 @@ export default class Contact extends Component {
 
     emailjs.send('default_service', 'contact_email', messageToSend, process.env.REACT_APP_USER)
     .then(() => {
-      console.log('success');
+      alert('Email sent!')
       this.resetForm();
     })
-    .catch(error => console.log('we fucked up'))
+    .catch(error => alert(`Message did not send: ${Error}`));
   }
 
   render() {
