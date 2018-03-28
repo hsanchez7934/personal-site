@@ -128,7 +128,7 @@ export default class LandingPage extends Component {
             <div id='intro-section-right'>
               <h2 id='name'>Hector A. Sanchez</h2>
               <p id='title'>
-                Snowboarder, avid reader, dog lover,
+                Life long learner, avid reader, dog lover,
                 music junkie, coding ninja extraordinaire
               </p>
             </div>
