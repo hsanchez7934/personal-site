@@ -6,8 +6,9 @@ import phoneIcon from '../../assets/cell.svg';
 import gmail from '../../assets/gmail.svg';
 import linkedInColor from '../../assets/linkedin-color.svg';
 import slack from '../../assets/slack.svg';
-import user from '../../user.js';
+// import user from '../../user.js';
 const emailjs = require('emailjs-com');
+
 
 export default class Contact extends Component {
   constructor() {
@@ -73,7 +74,7 @@ export default class Contact extends Component {
       message
     };
 
-    emailjs.send('default_service', 'contact_email', messageToSend, user)
+    emailjs.send('default_service', 'contact_email', messageToSend, process.env.REACT_APP_USER)
     .then(() => {
       console.log('success');
       this.resetForm();
@@ -81,8 +82,7 @@ export default class Contact extends Component {
     .catch(error => console.log('we fucked up'))
   }
 
-  render() {
-    console.log(user);
+  render() {    
     const { first, last, email, message } = this.state;
     return (
       <section id='contact'>
