@@ -17,6 +17,7 @@
 .env.production.local
 apikey.js
 .env
+user.js
 
 
 npm-debug.log*
