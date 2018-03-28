@@ -1,6 +1,11 @@
 {
   "name": "personal-website",
-  "version": "0.1.0",  
+  "version": "0.1.0",
+  "proxy": {
+    "/api/v1/sender": {
+      "target": "http://localhost:5000/"
+    }
+  },
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -20,10 +25,12 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start-front-end": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "concurrently \"npm run start-front-end\" \"npm run server\"",
+    "server": "nodemon server.js"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
