@@ -1,17 +1,8 @@
 {
   "name": "personal-website",
-  "version": "0.1.0",
-  "engines": {
-    "node": "9.5.0",
-    "npm": "5.6.0"
-  },
+  "version": "0.1.0",  
   "homepage" : "https://hsanchezdeveloper.herokuapp.com",
   "private": true,
-  "proxy": {
-    "/api/v1/sender": {
-      "target": "http://localhost:5000/"
-    }
-  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
