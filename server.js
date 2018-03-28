@@ -19,7 +19,7 @@ const requireHTTPS = (request, response, next) => {
 
 app.set('port', process.env.PORT || 5000);
 
-app.use(express.static(path.resolve(__dirname, './public')));
+// app.use(express.static(path.resolve(__dirname, './public')));
 app.locals.title = 'Hector A. Sanchez';
 
 // const transporter = nodemailer.createTransport({
