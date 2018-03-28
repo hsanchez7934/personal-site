@@ -7,7 +7,7 @@ const transporterConfig = require('./transporterConfig.js');
 require('dotenv').config();
 const environment = process.env.NODE_ENV || 'development';
 
-app.use(bodyParser.urlencoded({ extended: true}))
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 const requireHTTPS = (request, response, next) => {
@@ -39,7 +39,7 @@ const send = (mail) => {
   })
 }
 
-app.get('/', function(request, response) {
+app.get('/api/v1', function(request, response) {
   response.sendFile(
     path.resolve(__dirname, './public', 'index.html')
   );

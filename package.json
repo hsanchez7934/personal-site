@@ -5,7 +5,7 @@
     "node": "9.5.0",
     "npm": "5.6.0"
   },
-  "homepage" : "https://hsanchezdeveloper.herokuapp.com/",
+  "homepage" : "https://hsanchezdeveloper.herokuapp.com",
   "private": true,
   "proxy": {
     "/api/v1/sender": {
