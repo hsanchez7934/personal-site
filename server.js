@@ -10,12 +10,12 @@ const environment = process.env.NODE_ENV || 'development';
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-// const requireHTTPS = (request, response, next) => {
-//   if (request.header('x-forwarded-proto') !== 'https') {
-//     return response.redirect(`https://${request.header('host')}${request.url}`);
-//   }
-//   return next();
-// };
+const requireHTTPS = (request, response, next) => {
+  if (request.header('x-forwarded-proto') !== 'https') {
+    return response.redirect(`https://${request.header('host')}${request.url}`);
+  }
+  return next();
+};
 
 app.set('port', process.env.PORT || 5000);
 
