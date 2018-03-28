@@ -81,14 +81,18 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #000;
+  opacity: 0.8; }
 
 #form-container-right {
   width: 70%;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #000;
+  opacity: 0.8; }
 
 #form-container-left-wrapper {
   height: 90%;
