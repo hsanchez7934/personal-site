@@ -92,7 +92,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: row; }
 
 .project-links {
   display: block;
@@ -100,7 +100,7 @@
   border: 2px solid #000;
   width: 30%;
   height: 20%;
-  margin: 15px 0px;
+  margin: 15px 40px;
   text-align: center;
   padding: 18px;
   font-size: 14px;

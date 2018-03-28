@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LandingPage.css';
-import video from '../../assets/denverhero.mp4';
+import video from '../../assets/cities2.mp4';
 import photo from '../../assets/photo1.jpg';
 import portfolioIcon from '../../assets/briefcase.svg';
 import portfolioIconBlack from '../../assets/briefcase-black.svg';
@@ -106,7 +106,7 @@ export default class LandingPage extends Component {
               src={video}
               type='video/mp4' />
           </video>
-          <p className='quote fade-in one'>
+          <p className='quote'>
             the desire to create is one of the
             deepest yearnings of the human soul...
           </p>

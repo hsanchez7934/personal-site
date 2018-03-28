@@ -57,27 +57,30 @@
 
 #portfolio-description-box {
   background-color: $superlightgray;
-  height: 10%;
+  height: 8%;
   width: 100%;
-  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #pdb-title {
-  margin: 0 auto;;
+  margin: 0;
   width: 60%;
   text-align: center;
-  height: 30%;
+  height: 20%;
   font-weight: 500;
-  font-size: 2.2em;
-  padding: 60px 0px 0px;
+  font-size: 2em;
+  margin-top: 50px;
 }
 
 #pdb-text {
-  margin: 0 auto;;
+  margin: 0;
   width: 70%;
   text-align: center;
-  height: 70%;
-  font-size: 1.8em;
+  height: 50%;
+  font-size: 1.5em;
 }
 
 #projects-box {

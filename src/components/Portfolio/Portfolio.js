@@ -26,7 +26,7 @@ export default class Portfolio extends Component {
           <NavBar/>
           <section id='portfolio-intro-box'>
 
-            <h3 className='portfolio-intro-text fade-in one'>
+            <h3 className='portfolio-intro-text'>
               this world is but a canvas
               to our imagination...
             </h3>
@@ -40,10 +40,8 @@ export default class Portfolio extends Component {
             </h3>
             <p id='pdb-text'>
               Below you'll find a selection of some of the work
-              that highlight my technical abilities as a front-end engineer,
-              my ability to work effectively in a collaborative
-              environment, and my ability to work autonomously. I devote myself
-              to my projects and I enjoy every step of the build process.
+              that highlights my technical abilities as a front-end engineer.
+              I devote myself to my projects and I enjoy every step of the build process.
             </p>
           </section>
           <section id='projects-box'>

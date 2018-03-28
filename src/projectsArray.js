@@ -12,7 +12,7 @@ const projectsArray = [
     of sale system for a fictitious restaurant named the
     Greasy Spoon.  The application allows servers
     to open a check against a table.  Once a check is open,
-    servers can add menu items, void items as needed,
+    servers can add menu items to a check, void items as needed,
     and once ready, close out the check.  The application
     allows servers to view a history of open and
     closed checks.`,
@@ -30,12 +30,10 @@ const projectsArray = [
   {
     image: swapiBox,
     name: 'SWAPI BOX',
-    description: `SWAPI BOX retrieves data from SWAPI.co, the Star
-    Wars API, and displays movie information for the user.
-    This project highlights my ability to retrieve and manipulate data,
+    description: `SWAPI BOX is an application that displays Star Wars movie information
+    for a user.  The app retrieves data from SWAPI.co, the Star
+    Wars API.  This project highlights my ability to retrieve and manipulate data,
     implement the native fetch API, and build a user-friendly application using React.js.
-    This is an academic project built during my time at the Turing School of Software & Design.
-    It was built by myself and a partner as a paired project.
     `,
      stack: [
        'React.js',
@@ -75,8 +73,7 @@ const projectsArray = [
     manipulating data and creating small,
     reusable React components. The application
     contains school district data for the state of
-    Colorado. The data is manipulated as needed to display
-    stats for the user on the UI. The user
+    Colorado which is displayed for the user on the UI. The user
     has the option to select two cards to generate
     a comparison card. The user can also filter, in real time,
     for stats by school name.`,
@@ -97,13 +94,9 @@ const projectsArray = [
     current forecast, 7 hour forecast,
     and 10 day forecast.  The user is
     able to search for weather conditions
-    of any city in the U.S. and also
+    of any city in the U.S. and also for
     weather conditions of major cities
-    across the world .  An API call is
-    made to wunderground.com to retrieve
-    weather data that we then use to
-    display information for the user.
-    This project highlights my ability
+    across the world.  This project highlights my ability
     to retrieve and manipulate data,
     build an application using React,
     and effectively test React components.`,

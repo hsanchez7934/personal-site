@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => (
       <div className='project-description-box'>
         <div className='pdb-left'>
           <p className='project-description-title'>
-            DESCRIPTIONs
+            DESCRIPTION
           </p>
           <p className='project-description-text'>
             {project.description}

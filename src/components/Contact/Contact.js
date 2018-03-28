@@ -5,8 +5,7 @@ import './Contact.css';
 import phoneIcon from '../../assets/cell.svg';
 import gmail from '../../assets/gmail.svg';
 import linkedInColor from '../../assets/linkedin-color.svg';
-import slack from '../../assets/slack.svg';
-// import user from '../../user.js';
+import skype from '../../assets/skype.svg';
 const emailjs = require('emailjs-com');
 
 
@@ -82,14 +81,14 @@ export default class Contact extends Component {
     .catch(error => console.log('we fucked up'))
   }
 
-  render() {    
+  render() {
     const { first, last, email, message } = this.state;
     return (
       <section id='contact'>
         <header id='contact-header'>
           <NavBar />
           <section id='contact-quote-container'>
-            <p class='contact-quote-text fade-in one'>
+            <p class='contact-quote-text'>
               a simple hello can lead to a million things...
             </p>
             <h1 id='contact-quote'>LET'S HAVE A CHAT</h1>
@@ -136,10 +135,10 @@ export default class Contact extends Component {
                 </div>
                 <div className='contact-info-boxes'>
                   <div className='contact-icon-containers'>
-                    <img src={slack} alt='' className='contact-icons'/>
+                    <img src={skype} alt='' className='contact-icons'/>
                   </div>
                   <div className='contact-info-text-container'>
-                    <p className='contact-info-text'>@HectorASanchez</p>
+                    <p className='contact-info-text'>live:hsanchez7934</p>
                   </div>
                 </div>
               </div>
