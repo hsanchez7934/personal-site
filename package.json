@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "body-parser": "^1.18.2",    
+    "body-parser": "^1.18.2",
     "emailjs-com": "^2.1.0",
     "express": "^4.16.2",
     "node-sass-chokidar": "0.0.3",
@@ -20,12 +20,10 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start-front-end": "npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "start": "concurrently \"npm run start-front-end\" \"npm run server\"",
-    "server": "nodemon server.js"
+    "eject": "react-scripts eject"    
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
