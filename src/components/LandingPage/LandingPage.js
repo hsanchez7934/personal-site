@@ -107,8 +107,7 @@ export default class LandingPage extends Component {
               type='video/mp4' />
           </video>
           <p className='quote'>
-            the desire to create is one of the
-            deepest yearnings of the human soul...
+            things aren’t always #000 and #f f f
           </p>
           <h2 id='landing-page-title'>
             FRONT-END DEVELOPER
