@@ -55,7 +55,7 @@ video {
   color: #42e8f4;
   cursor: pointer; }
 
-.quote {
+#landing-page-quote {
   position: absolute;
   color: #fff;
   font-size: 60px;
@@ -72,7 +72,7 @@ video {
   opacity: 0.9;
   margin: 0;
   font-size: 85px;
-  width: 80%;
+  width: 95%;
   text-align: center;
   margin-top: 80px; }
 
@@ -348,3 +348,69 @@ video {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
+
+@media screen and (max-width: 1060px) {
+  #landing-page-title {
+    margin-top: 130px; }
+  #intro-section-left {
+    width: 50%; }
+  #intro-section-right {
+    width: 50%; } }
+
+@media screen and (max-width: 650px) {
+  #landing-page-quote {
+    font-size: 55px;
+    width: 95%; }
+  #landing-page-title {
+    font-size: 70px; }
+  #landing-page-nav {
+    background-color: #000;
+    opacity: 0.7; }
+  #nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    width: 100%; }
+  a.router-nav-links {
+    margin: 0px 30px; }
+  #profile-pic {
+    height: 250px;
+    width: 265px;
+    margin: 0 auto; }
+  #title {
+    width: 95%;
+    font-size: 1.3em;
+    padding-right: 80px; }
+  #name {
+    font-size: 1.8em;
+    width: 95%; }
+  #intro-section-right {
+    padding-left: 10px; } }
+
+@media screen and (max-width: 510px) {
+  #landing-page-quote {
+    font-size: 45px; }
+  #profile-pic {
+    height: 170px;
+    width: 160px; }
+  #landing-page-title {
+    font-size: 60px;
+    margin-top: 100px; }
+  a.router-nav-links {
+    margin: 0px 20px; }
+  #title {
+    width: 95%;
+    font-size: 1em;
+    padding-right: 20px; }
+  #name {
+    font-size: 1.5em;
+    width: 95%; } }
+
+@media screen and (max-width: 450px) {
+  #landing-page-quote {
+    font-size: 35px; }
+  #landing-page-title {
+    font-size: 50px;
+    margin-top: 80px; } }

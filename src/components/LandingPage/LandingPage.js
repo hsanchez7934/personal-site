@@ -106,7 +106,7 @@ export default class LandingPage extends Component {
               src={video}
               type='video/mp4' />
           </video>
-          <p className='quote'>
+          <p id='landing-page-quote'>
             things aren’t always #000 and #f f f
           </p>
           <h2 id='landing-page-title'>
