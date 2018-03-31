@@ -168,9 +168,10 @@ video {
   padding: 50px 0px 0px; }
 
 .logo-box {
-  height: 15%;
-  width: 15%;
-  margin: 0px 25px; }
+  height: 180px;
+  width: 180px;
+  margin: 0px 25px;
+  display: inline-block; }
 
 .logo-container {
   height: 60%;
@@ -349,13 +350,82 @@ video {
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
 
+/*----------------------------------------
+>>>>>>>>  MEDIA QUIERES  <<<<<<<<
+----------------------------------------*/
 @media screen and (max-width: 1060px) {
   #landing-page-title {
     margin-top: 130px; }
   #intro-section-left {
     width: 50%; }
   #intro-section-right {
-    width: 50%; } }
+    width: 50%; }
+  .logo-box {
+    height: 130px;
+    width: 200px; } }
+
+@media screen and (max-width: 950px) {
+  #portfolio-button-link {
+    width: 25%; }
+  #ltp-button {
+    font-size: 0.9em; }
+  #portfolio-icon {
+    height: 18px;
+    width: 18px;
+    top: 2px; }
+  #skills {
+    width: 100%; } }
+
+@media screen and (max-width: 890px) {
+  #school-title {
+    font-size: 1.2em; }
+  #achieved {
+    font-size: 1.2em; }
+  #achieved-text {
+    margin: 20px 0px 0px;
+    height: 40%;
+    font-size: 1em;
+    width: 70%; }
+  #school-date {
+    margin: 15px 0px 0px;
+    height: 5%;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: right;
+    padding-right: 50px; } }
+
+@media screen and (max-width: 750px) {
+  #portfolio-button-link {
+    width: 35%;
+    height: 23%; }
+  .logo-box {
+    height: 120px;
+    width: 140px; }
+  .skill-name {
+    font-size: 1em; }
+  #school-date {
+    padding: 0px 0px 0px;
+    width: 100%;
+    text-align: center; }
+  #school-title {
+    padding: 0px 0px 0px;
+    width: 100%;
+    text-align: center; }
+  #school-info-box {
+    flex-direction: column; }
+  #school-info-box-left {
+    width: 100%;
+    height: 50%; }
+  #school-info-box-right {
+    width: 100%;
+    height: 50%; }
+  #achieved {
+    margin: 0px 0px 0px;
+    text-align: center; }
+  #achieved-text {
+    margin: 25px auto 0px;
+    width: 90%;
+    text-align: center; } }
 
 @media screen and (max-width: 650px) {
   #landing-page-quote {
@@ -387,9 +457,29 @@ video {
     font-size: 1.8em;
     width: 95%; }
   #intro-section-right {
-    padding-left: 10px; } }
+    padding-left: 10px; }
+  #about-me-title {
+    font-size: 1.8em; }
+  #titles-text1 {
+    font-size: 1.3em; }
+  #skills-title {
+    font-size: 1.8em; }
+  #ltp-text {
+    font-size: 1.8em; }
+  #education-title {
+    font-size: 1.8em; } }
+
+@media screen and (max-width: 570px) {
+  .logo-box {
+    height: 100px;
+    width: 140px; }
+  #ltp-text {
+    font-size: 1.5em;
+    padding-top: 40px; } }
 
 @media screen and (max-width: 510px) {
+  #portfolio-button-link {
+    width: 45%; }
   #landing-page-quote {
     font-size: 45px; }
   #profile-pic {
@@ -406,11 +496,45 @@ video {
     padding-right: 20px; }
   #name {
     font-size: 1.5em;
-    width: 95%; } }
+    width: 95%; }
+  #about-me-title {
+    font-size: 1.5em; }
+  #titles-text1 {
+    font-size: 1.2em; }
+  #about-me {
+    padding: 60px 0px 10px; }
+  #skills-title {
+    font-size: 1.5em; }
+  #education-title {
+    font-size: 1.5em; } }
 
 @media screen and (max-width: 450px) {
   #landing-page-quote {
     font-size: 35px; }
   #landing-page-title {
     font-size: 50px;
-    margin-top: 80px; } }
+    margin-top: 80px; }
+  #skills-box {
+    padding: 0px 0px 0px; }
+  #portfolio-button-link {
+    height: 20%;
+    width: 60%; }
+  #ltp-button {
+    font-size: 0.8em; }
+  #portfolio-icon {
+    height: 15px;
+    width: 15px; } }
+
+@media screen and (max-width: 390px) {
+  .logo-box {
+    height: 70px;
+    width: 70px; }
+  #about-me-title {
+    font-size: 1.3em; }
+  #titles-text1 {
+    font-size: 1em; }
+  #skills-title {
+    font-size: 1.3em; }
+  #ltp-text {
+    font-size: 1.3em;
+    padding-top: 40px; } }

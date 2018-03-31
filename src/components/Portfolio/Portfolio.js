@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Portfolio.css';
-import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar.js';
 import projectsArray from '../../projectsArray.js';
 import ProjectCard from '../ProjectCard/ProjectCard.js';
@@ -9,18 +8,18 @@ import Footer from '../Footer/Footer.js';
 export default class Portfolio extends Component {
 
   componentDidMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
 
   createProjectCards = () => (
     projectsArray.map( (project, index) =>
-    <ProjectCard
-      project={project} />
+      <ProjectCard
+        project={project} key={index} />
     )
   );
 
   render() {
-    return(
+    return (
       <section id='portfolio-container'>
         <header id='portfolio-header'>
           <NavBar/>
@@ -41,7 +40,8 @@ export default class Portfolio extends Component {
             <p id='pdb-text'>
               Below you'll find a selection of some of the work
               that highlights my technical abilities as a front-end engineer.
-              I devote myself to my projects and I enjoy every step of the build process.
+              I devote myself to my projects and I enjoy every step
+              of the build process.
             </p>
           </section>
           <section id='projects-box'>
@@ -52,6 +52,6 @@ export default class Portfolio extends Component {
         </main>
         <Footer />
       </section>
-    )
+    );
   }
-};
+}

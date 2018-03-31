@@ -17,11 +17,11 @@ export default class Contact extends Component {
       last: '',
       email: '',
       message: ''
-    }
+    };
   }
 
   componentDidMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
 
   backgroundImage = (url) => ({
@@ -40,30 +40,30 @@ export default class Contact extends Component {
   }
 
   resetForm = () => {
-      this.setState({
-        first: '',
-        last: '',
-        email: '',
-        message: ''
-      });
+    this.setState({
+      first: '',
+      last: '',
+      email: '',
+      message: ''
+    });
   }
 
   sendEmail = (first, last, email, message) => {
     const params = [first, last, email, message];
 
-    for(let i = 0; i < params.length; i++) {
-      if(params[i] === '') {
+    for (let i = 0; i < params.length; i++) {
+      if (params[i] === '') {
         alert(`Please fill out entire form.`);
         return;
       }
     }
 
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(email.match(mailformat)) {
+    if (email.match(mailformat)) {
         console.log('good email');
     } else {
-        alert("You have entered an invalid email address!");
-        return;
+      alert("You have entered an invalid email address!");
+      return;
     }
 
     let messageToSend = {
@@ -73,12 +73,17 @@ export default class Contact extends Component {
       message
     };
 
-    emailjs.send('default_service', 'contact_email', messageToSend, process.env.REACT_APP_USER)
-    .then(() => {
-      alert('Email sent!')
-      this.resetForm();
-    })
-    .catch(error => alert(`Message did not send: ${Error}`));
+    emailjs.send(
+      'default_service',
+      'contact_email',
+      messageToSend,
+      process.env.REACT_APP_USER
+    )
+      .then(() => {
+        alert('Email sent!');
+        this.resetForm();
+      })
+      .catch(error => alert(`Message did not send:` + error));
   }
 
   render() {
@@ -130,7 +135,9 @@ export default class Contact extends Component {
                     <img src={linkedInColor} alt='' className='contact-icons'/>
                   </div>
                   <div className='contact-info-text-container'>
-                    <p className='contact-info-text'>linkedin.com/in/hector-a-sanchez</p>
+                    <p className='contact-info-text'>
+                      linkedin.com/in/hector-a-sanchez
+                    </p>
                   </div>
                 </div>
                 <div className='contact-info-boxes'>
@@ -138,7 +145,9 @@ export default class Contact extends Component {
                     <img src={skype} alt='' className='contact-icons'/>
                   </div>
                   <div className='contact-info-text-container'>
-                    <p className='contact-info-text'>live:hsanchez7934</p>
+                    <p className='contact-info-text'>
+                      live:hsanchez7934
+                    </p>
                   </div>
                 </div>
               </div>
@@ -149,77 +158,77 @@ export default class Contact extends Component {
                 id='form-wrapper'
                 name='sender'>
 
-                  <div id='form-box'>
-                    <div id='form-heading'>
-                      SEND ME A MESSAGE
-                    </div>
-                    <div id='full-name'>
-                      FULL NAME*
-                    </div>
-                    <div id='name-inputs-box'>
-                      <fieldset>
-                        <legend>First Name</legend>
-                      </fieldset>
-                      <div id='first-last-name-input-box'>
-                        <div className='input-wrappers'>
-                          <input
-                            type='text'
-                            className='name-inputs'
-                            value={first}
-                            name='first'
-                            required
-                            onChange={(event) => this.updateOnChange(event)} />
-                            <label>First Name</label>
-                        </div>
-                        <div className='input-wrappers'>
-                          <input
-                            type='text'
-                            className='name-inputs'
-                            name='last'
-                            required
-                            value={last}
-                            onChange={(event) => this.updateOnChange(event)} />
-                            <label>Last Name</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div id='email-input-box'>
-                      <div id='email-input-title'>EMAIL ADDRESS*</div>
-                      <input
-                        type='email'
-                        id='email-input-tag'
-                        name='email'
-                        value={email}
-                        required
-                        onChange={(event) => this.updateOnChange(event)} />
-
-                    </div>
-                    <div id='message-textarea-box'>
-                      <div id='message-textarea-box-title'>
-                        YOUR MESSAGE*
-                      </div>
-                      <div id='message-textarea'>
-                        <textarea
-                          name='message'
+                <div id='form-box'>
+                  <div id='form-heading'>
+                    SEND ME A MESSAGE
+                  </div>
+                  <div id='full-name'>
+                    FULL NAME*
+                  </div>
+                  <div id='name-inputs-box'>
+                    <fieldset>
+                      <legend>First Name</legend>
+                    </fieldset>
+                    <div id='first-last-name-input-box'>
+                      <div className='input-wrappers'>
+                        <input
+                          type='text'
+                          className='name-inputs'
+                          value={first}
+                          name='first'
                           required
-                          value={message}
-                          onChange={(event) => this.updateOnChange(event)}>
-                          </textarea>
+                          onChange={(event) => this.updateOnChange(event)} />
+                        <label>First Name</label>
                       </div>
-                    </div>
-                    <div id='submit-button-container'>
-                      <input
-                        type='submit'
-                        value='SUBMIT'
-                        id='submit-button'
-                        onClick={(e) =>{
-                          e.preventDefault();
-                          this.sendEmail(first, last, email, message);
-                        }} />
+                      <div className='input-wrappers'>
+                        <input
+                          type='text'
+                          className='name-inputs'
+                          name='last'
+                          required
+                          value={last}
+                          onChange={(event) => this.updateOnChange(event)} />
+                        <label>Last Name</label>
+                      </div>
                     </div>
                   </div>
+                  <div id='email-input-box'>
+                    <div id='email-input-title'>EMAIL ADDRESS*</div>
+                    <input
+                      type='email'
+                      id='email-input-tag'
+                      name='email'
+                      value={email}
+                      required
+                      onChange={(event) => this.updateOnChange(event)} />
 
+                  </div>
+                  <div id='message-textarea-box'>
+                    <div id='message-textarea-box-title'>
+                      YOUR MESSAGE*
+                    </div>
+                    <div id='message-textarea'>
+                      <textarea
+                        name='message'
+                        required
+                        value={message}
+                        onChange={(event) => this.updateOnChange(event)}>
+                      </textarea>
+                    </div>
+                  </div>
+                  <div id='submit-button-container'>
+                    <input
+                      type='submit'
+                      value='SUBMIT'
+                      id='submit-button'
+                      onClick={(event) =>{
+                        event.preventDefault();
+                        this.sendEmail(first, last, email, message);
+                      }} />
+                  </div>
+                </div>
               </form>
+              
             </div>
           </section>
         </main>

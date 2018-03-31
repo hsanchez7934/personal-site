@@ -3,7 +3,7 @@ import './App.css';
 import LandingPage from '../LandingPage/LandingPage.js';
 import Portfolio from '../Portfolio/Portfolio.js';
 import Contact from '../Contact/Contact.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends Component {

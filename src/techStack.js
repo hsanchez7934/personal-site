@@ -17,88 +17,70 @@ import jestLogo from './assets/jestlogo.svg';
 import enzymeLogo from './assets/enzymelogo.png';
 import mochaLogo from './assets/mochalogo.svg';
 import jasmineLogo from './assets/jasminelogo.svg';
+import responsiveDesign from './assets/responsive-design.png';
 
 const techStackArray = [
   {
     logo: htmlLogo,
     name: 'HTML5'
-  },
-  {
+  }, {
     logo: cssLogo,
-     name: 'CSS3'
-  },
-  {
+    name: 'CSS3'
+  }, {
     logo: sassLogo,
     name: 'SASS'
-  },
-  {
+  }, {
     logo: jsLogo,
     name: 'JavaScript'
-  },
-  {
+  }, {
     logo: es6Logo,
     name: 'ES6'
-  },
-  {
+  }, {
     logo: jqueryLogo,
     name: 'jQuery'
-  },
-  {
+  }, {
     logo: nodeJSLogo,
     name: 'Node.js'
-  },
-  {
+  }, {
     logo: expressLogo,
     name: 'Express.js'
-  },
-  {
+  }, {
     logo: knexLogo,
     name: 'Knex.js'
-  },
-  {
+  }, {
     logo: reactLogo,
     name: 'React.js'
-  },
-  {
+  }, {
     logo: reduxLogo,
     name: 'Redux'
-  },
-  {
+  }, {
     logo: routerLogo,
     name: 'React Router'
-  },
-  {
+  }, {
     logo: sqlLogo,
     name: 'PostgreSQL'
-  },
-  {
+  }, {
     logo: gitLogo,
     name: 'Git'
- },
- {
-   logo: chaiLogo,
-   name: 'Chai'
- },
- {
-   logo: mochaLogo,
-   name: 'Mocha'
- },
- {
-   logo: jestLogo,
-   name: 'Jest'
- },
- {
-   logo: enzymeLogo,
-   name: 'Enzyme'
- },
- {
-   logo: jasmineLogo,
-   name: 'Jasmine'
- },
- {
-   logo: '',
-   name: ''
- }
+  }, {
+    logo: chaiLogo,
+    name: 'Chai'
+  }, {
+    logo: mochaLogo,
+    name: 'Mocha'
+  }, {
+    logo: jestLogo,
+    name: 'Jest'
+  }, {
+    logo: enzymeLogo,
+    name: 'Enzyme'
+  }, {
+    logo: jasmineLogo,
+    name: 'Jasmine'
+  }, {
+    logo: responsiveDesign,
+    name: 'Responsive Design'
+  }
 ];
 
 export default techStackArray;

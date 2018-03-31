@@ -18,7 +18,7 @@ export default class LandingPage extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
 
   iconChange = (query, icon) => {
@@ -37,19 +37,21 @@ export default class LandingPage extends Component {
   createSkillBoxes = (array) => (
     array.map( (skill, index) => {
       return (
-        <article className='logo-box'>
+        <article
+          className='logo-box'
+          key={index}>
           <div
             style={this.backgroundImage(skill.logo)}
             className='logo-container'>
           </div>
           <p className='skill-name'>{skill.name}</p>
         </article>
-      )
+      );
     })
   );
 
   render() {
-    const { linkedin, github, liClass, outOfFocus, briefcase } = this.state;
+    const { liClass, briefcase } = this.state;
 
     return (
       <div className='landing-page-container'>
@@ -164,8 +166,10 @@ export default class LandingPage extends Component {
               <Link
                 to={'/portfolio'}
                 id='portfolio-button-link'
-                onMouseEnter={ () => this.iconChange('briefcase', portfolioIcon)}
-                onMouseLeave={() => this.iconChange('briefcase', portfolioIconBlack)}>
+                onMouseEnter={ () =>
+                  this.iconChange('briefcase', portfolioIcon)}
+                onMouseLeave={() =>
+                  this.iconChange('briefcase', portfolioIconBlack)}>
                 <button
                   id='ltp-button'>
                   <img
@@ -202,11 +206,11 @@ export default class LandingPage extends Component {
               </div>
             </div>
             <div id='school-link-box'>
-                <a
-                  id='school-url'
-                  href="https://www.turing.io/alumni/hector-sanchez">
-                  VISIT ALUMNI PAGE
-                </a>
+              <a
+                id='school-url'
+                href="https://www.turing.io/alumni/hector-sanchez">
+                VISIT ALUMNI PAGE
+              </a>
             </div>
           </section>
         </main>
