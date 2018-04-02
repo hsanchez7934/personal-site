@@ -34,8 +34,7 @@
   margin: 0;
   color: #fff;
   font-size: 90px;
-  font-weight: lighter;
-  opacity: 0.9; }
+  font-weight: lighter; }
 
 #contact-main {
   width: 100%;
@@ -116,7 +115,7 @@
 .contact-info-text-container {
   height: 30%;
   width: 80%;
-  box-shadow: inset 1px 0 0 #fff;
+  border-left: 1px solid #fff;
   display: flex;
   align-items: center; }
 
@@ -182,7 +181,6 @@ legend {
   height: 60%; }
 
 label {
-  font-size: 0.5em;
   display: block;
   width: 80%;
   margin-top: 5px;
@@ -298,3 +296,78 @@ textarea {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
+
+@media screen and (max-width: 1000px) {
+  #contact-main {
+    width: 100%;
+    height: 1500px; }
+  .contact-quote-text {
+    width: 95%;
+    text-align: center; }
+  #contact-quote {
+    width: 95%;
+    text-align: center; }
+  #contact-main-intro {
+    height: 20%; }
+  #contact-main-intro-title {
+    width: 95%;
+    font-size: 1.8em; }
+  #contact-main-intro-text {
+    width: 95%;
+    font-size: 1.3em; }
+  #contact-main-form-container {
+    flex-direction: column;
+    height: 80%; }
+  #form-container-left {
+    width: 100%;
+    height: 30%; }
+  #form-container-left-wrapper {
+    height: 95%;
+    width: 95%;
+    padding: 0px; }
+  .contact-icon-containers {
+    height: 100%;
+    width: 35%; }
+  .contact-info-text-container {
+    height: 50%;
+    width: 65%; }
+  #form-container-right {
+    width: 100%;
+    height: 70%; }
+  .contact-icons {
+    height: 35px;
+    width: 35px; } }
+
+@media screen and (max-width: 850px) {
+  .contact-quote-text {
+    font-size: 55px; }
+  #contact-quote {
+    font-size: 70px; }
+  #submit-button {
+    width: 55%; } }
+
+@media screen and (max-width: 650px) {
+  .contact-quote-text {
+    font-size: 45px; }
+  #contact-quote {
+    font-size: 60px; }
+  #contact-main-intro-title {
+    font-size: 1.5em; }
+  #contact-main-intro-text {
+    font-size: 1.1em; }
+  #form-heading {
+    font-size: 1.3em; }
+  #full-name {
+    font-size: 0.7em;
+    color: #fff;
+    padding-top: 15px; }
+  label {
+    font-size: 0.6em; }
+  #email-input-title {
+    font-size: 0.7em; }
+  #message-textarea-box-title {
+    font-size: 0.7em; }
+  #submit-button {
+    font-size: 0.7em; }
+  .contact-info-text {
+    font-size: 0.8em; } }
