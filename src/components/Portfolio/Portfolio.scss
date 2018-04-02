@@ -28,7 +28,6 @@
 }
 
 #portfolio-title {
-  margin: 0;
   font-size: 90px;
   font-weight: 400;
   color: $white;
@@ -66,13 +65,12 @@
 }
 
 #pdb-title {
-  margin: 0;
   width: 60%;
   text-align: center;
   height: 20%;
   font-weight: 500;
   font-size: 2em;
-  margin-top: 50px;
+  margin: 50px 0px 0px 0px;
 }
 
 #pdb-text {
@@ -113,4 +111,66 @@
   -webkit-animation-delay: 0.1s;
   -moz-animation-delay: 0.1s;
   animation-delay: 0.1s;
+}
+
+@media screen and (max-width: 1000px) {
+  .portfolio-intro-text {
+    width: 95%;
+  }
+
+  #portfolio-title {
+    width: 95%;
+  }
+
+  #pdb-title {
+    width: 100%;
+    // font-size: 1.8em;
+  }
+
+  #pdb-text {
+    margin: 0;
+    width: 70%;
+    text-align: center;
+    height: 50%;
+    font-size: 1.3em;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .portfolio-intro-text {
+    font-size: 55px;
+  }
+
+  #portfolio-title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .portfolio-intro-text {
+    font-size: 45px;
+  }
+
+  #portfolio-title {
+    font-size: 60px;
+  }
+
+  #pdb-title {
+    font-size: 1.8em;
+  }
+
+  #pdb-text {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #pdb-title {    
+    font-size: 1.5em;
+  }
+
+  #pdb-text {
+    font-size: 1.1em;
+  }
 }
