@@ -36,9 +36,9 @@ export default class Footer extends Component {
           <Link
             to={'/'}
             className='router-footer-nav-links'>
-                <li className='footer-links-li'>
-                  HOME
-                </li>
+            <li className='footer-links-li'>
+              HOME
+            </li>
           </Link>
           <Link
             to={'/portfolio'}
@@ -75,4 +75,4 @@ export default class Footer extends Component {
       </footer>
     );
   }
-};
+}
