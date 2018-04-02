@@ -114,6 +114,15 @@
   padding: 18px; }
 
 @media screen and (max-width: 1000px) {
+  #portfolio-main {
+    height: 4190px; }
+  #projects-box {
+    width: 100%;
+    height: 90%;
+    padding: 20px; }
+  .project-card {
+    margin: 50px 0px;
+    width: 100%; }
   .project-image {
     height: 35%;
     width: 100%; }
