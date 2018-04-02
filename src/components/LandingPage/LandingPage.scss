@@ -393,7 +393,7 @@ video {
 /*----------------------------------------
 >>>>>>>>  MEDIA QUIERES  <<<<<<<<
 ----------------------------------------*/
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1200px) {
 
   #landing-page-title {
     margin-top: 130px;
@@ -414,10 +414,18 @@ video {
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
 
   #portfolio-button-link {
     width: 25%;
+  }
+
+  #school-url {
+    height: 50%;
+    width: 25%;
+    font-size: 1em;
+    padding-top: 25px;
+    margin: 0 auto 10px;
   }
 
   #ltp-button {
@@ -436,7 +444,8 @@ video {
 
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 900px) {
+
   #school-title {
     font-size: 1.2em;
   }
@@ -459,22 +468,6 @@ video {
     font-weight: 400;
     text-align: right;
     padding-right: 50px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  #portfolio-button-link {
-    width: 35%;
-    height: 23%;
-  }
-
-  .logo-box {
-    height: 120px;
-    width: 140px;
-  }
-
-  .skill-name {
-    font-size: 1em;
   }
 
   #school-date {
@@ -509,9 +502,33 @@ video {
   }
 
   #achieved-text {
-    margin: 25px auto 0px;    
+    margin: 25px auto 0px;
     width: 90%;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  #portfolio-button-link {
+    width: 35%;
+    height: 23%;
+  }
+
+  #school-url {
+    height: 45%;
+    width: 35%;
+    font-size: 0.9em;
+    padding-top: 23px;
+  }
+
+  .logo-box {
+    height: 120px;
+    width: 140px;
+  }
+
+  .skill-name {
+    font-size: 1em;
   }
 
 }
@@ -605,6 +622,10 @@ video {
     width: 45%;
   }
 
+  #school-url {
+    width: 45%;
+  }
+
   #landing-page-quote {
     font-size: 45px;
   }
@@ -675,6 +696,10 @@ video {
     width: 60%;
   }
 
+  #school-url {
+    width: 60%;
+  }
+
   #ltp-button {
     font-size: 0.8em;
   }
@@ -708,5 +733,4 @@ video {
     font-size: 1.3em;
     padding-top: 40px;
   }
-
 }
