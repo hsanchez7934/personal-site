@@ -90,8 +90,6 @@
 #form-container-left {
   width: 30%;
   height: 100%;
-  // background-color: $white;
-  // opacity: 0.7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,14 +110,12 @@
 #form-container-left-wrapper {
 height: 90%;
 width: 90%;
-// background-color: green;
 padding: 50px;
 }
 
 .contact-info-boxes {
   width: 100%;
   height: 25%;
-  // border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +153,6 @@ padding: 50px;
 #form-wrapper {
   height: 85%;
   width: 85%;
-  // border: 1px solid $white;
   -webkit-box-shadow: 0px 0px 31px 1px rgba(221,211,213,1);
   -moz-box-shadow: 0px 0px 31px 1px rgba(221,211,213,1);
   box-shadow: 0px 0px 31px 1px rgba(221,211,213,1);
@@ -170,7 +165,6 @@ padding: 50px;
   height: 90%;
   width: 75%;
   padding-left: 30px;
-  // background-color: green;
 }
 
 #form-heading {
@@ -178,14 +172,12 @@ padding: 50px;
   height: 10%;
   text-align: center;
   font-size: 1.6em;
-  // padding-top: 10px;
   color: $white;
 }
 
 #full-name {
   width: 100%;
   height: 5%;
-  // background-color: green;
   font-size: 0.9em;
   color: $white;
   padding-top: 15px;
@@ -194,7 +186,6 @@ padding: 50px;
 #name-inputs-box {
   width: 100%;
   height: 15%;
-  // background-color: green;
 }
 
 fieldset {
@@ -206,7 +197,6 @@ legend {
 }
 
 #first-last-name-input-box {
-  // background-color: pink;
   width: 100%;
   height: 100%;
   display: flex;
@@ -215,7 +205,6 @@ legend {
 }
 
 .input-wrappers {
-  // background-color: blue;
   width: 50%;
   height: 60%;
 }
@@ -239,7 +228,6 @@ label {
 
 #email-input-box {
   width: 100%;
-  // background-color: red;
   height: 15%;
   padding-top: 5px;
 }
@@ -289,7 +277,6 @@ textarea {
 }
 
 #submit-button-container {
-  // background-color: purple;
   width: 95%;
   height: 25%;
   display: flex;
