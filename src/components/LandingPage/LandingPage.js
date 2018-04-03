@@ -109,7 +109,7 @@ export default class LandingPage extends Component {
               type='video/mp4' />
           </video>
           <p id='landing-page-quote'>
-            things aren’t always #000 and #f f f
+            one man's constant is another man's variable...
           </p>
           <h2 id='landing-page-title'>
             FRONT-END DEVELOPER

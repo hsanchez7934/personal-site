@@ -418,9 +418,18 @@ textarea {
   #submit-button {
     width: 55%;
   }
+
+
 }
 
 @media screen and (max-width: 650px) {
+
+  #form-box {
+    height: 90%;
+    width: 90%;
+    padding-left: 15px;
+  }
+
   .contact-quote-text {
     font-size: 45px;
   }

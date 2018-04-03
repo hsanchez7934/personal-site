@@ -423,7 +423,7 @@ video {
     width: 90%;
     text-align: center; } }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
   #portfolio-button-link {
     width: 35%;
     height: 23%; }
@@ -436,12 +436,13 @@ video {
     height: 120px;
     width: 140px; }
   .skill-name {
-    font-size: 1em; } }
+    font-size: 1em; }
+  #landing-page-quote {
+    width: 95%; } }
 
 @media screen and (max-width: 650px) {
   #landing-page-quote {
-    font-size: 55px;
-    width: 95%; }
+    font-size: 55px; }
   #landing-page-title {
     font-size: 70px; }
   #landing-page-nav {
@@ -500,7 +501,7 @@ video {
     width: 160px; }
   #landing-page-title {
     font-size: 60px;
-    margin-top: 100px; }
+    margin-top: 110px; }
   a.router-nav-links {
     margin: 0px 20px; }
   #title {
@@ -526,7 +527,7 @@ video {
     font-size: 35px; }
   #landing-page-title {
     font-size: 50px;
-    margin-top: 80px; }
+    margin-top: 90px; }
   #skills-box {
     padding: 0px 0px 0px; }
   #portfolio-button-link {
