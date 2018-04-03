@@ -354,8 +354,6 @@ video {
 >>>>>>>>  MEDIA QUIERES  <<<<<<<<
 ----------------------------------------*/
 @media screen and (max-width: 1200px) {
-  #landing-page-title {
-    margin-top: 130px; }
   #intro-section-left {
     width: 50%; }
   #intro-section-right {
@@ -363,6 +361,10 @@ video {
   .logo-box {
     height: 130px;
     width: 200px; } }
+
+@media screen and (max-width: 1062px) {
+  #landing-page-title {
+    margin-top: 130px; } }
 
 @media screen and (max-width: 1000px) {
   #portfolio-button-link {

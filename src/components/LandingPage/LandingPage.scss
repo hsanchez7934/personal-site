@@ -395,10 +395,6 @@ video {
 ----------------------------------------*/
 @media screen and (max-width: 1200px) {
 
-  #landing-page-title {
-    margin-top: 130px;
-  }
-
   #intro-section-left {
     width: 50%;
   }
@@ -412,6 +408,12 @@ video {
     width: 200px;
   }
 
+}
+
+@media screen and (max-width: 1062px) {
+  #landing-page-title {
+    margin-top: 130px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
